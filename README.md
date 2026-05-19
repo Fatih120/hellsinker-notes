@@ -6,17 +6,18 @@ Many of the findings are thanks to [Beetle-Omiwatari](https://www.youtube.com/@b
 
 No disrespect intended towards Ruminant's Whimper. No assets aside from screenshots and *unused content* should be in this repository.
 
-[![Fluxer badge](https://img.shields.io/badge/Fluxer-4641D9.svg?style=for-the-badge&logo=Fluxer&logoColor=white)]([https://your-link-here.com](https://fluxer.gg/NporEBmI))
+[![Fluxer badge](https://img.shields.io/badge/Fluxer-4641D9.svg?style=for-the-badge&logo=Fluxer&logoColor=white)](https://fluxer.gg/NporEBmI)
 
 ## Info
 
 Here is some base information on how Hellsinker was (probably) developed:
 
 - Language: Delphi (Object Pascal)
-- IDE/Suite: Either Borland Delphi 4.0 Professional or Borland Developer Studio 2006 Professional
+- IDE/Suite: Either Borland **Delphi 4.0** Professional (according to datamine) or Borland **Developer Studio 2006** Professional (according to [DIE](https://github.com/horsicq/Detect-It-Easy), also considering the former is OLD)
+  - Linker: Turbo Linker (2.25)?
 - Libraries:
   - DirectX9
-  - [Quadruple D](http://karen.saiin.net/~hayase/dddd/index.html) (DirectX components)
+  - [Quadruple D](http://karen.saiin.net/~hayase/dddd/index.html) (API for DirectX components)
   - libvorbis
 
 ## How-to
@@ -43,4 +44,4 @@ Simplified X format from Direct3D 9. Convert with [MrSoup678/QuardupleD_ModelCon
 
 #### backboneteller pak (bbt)
 
-Check the bms file in /tools for use in QuickBMS to unpack.
+Check the bms file in /tools for use in [QuickBMS](https://aluigi.altervista.org/quickbms.htm) to unpack.
