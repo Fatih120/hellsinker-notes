@@ -1,0 +1,11 @@
+Location of end of stage TIMER values in FSO and Short Mission replay files
+* Stages are in chronological order. For example, in a Short Mission replay with 2L→3B→4→6 route, Seg2L is the first stage and Seg3B is the second one.
+0000044C	Stage 1*
+0002AB98	Stage 2
+000552E4	Stage 3
+0007FA30	Stage 4
+000AA17C	Stage 5
+000D48C8	Stage 6
+000FF014	Stage 7
+00129760	Stage 8
+00153EAC	Stage 9

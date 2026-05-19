@@ -1,0 +1,20 @@
+Note	something	planet	00577948		ds "bmp\\planet2.bmp"
+Note	something	is it epitaph	0051b01c	FUN_0051b01c	PUSH EBP
+Note	something	the order is totally ove	00689122		MOV EAX,s_AND_THE_ORDER_IS_TOTALLY_OVER._00689878
+Note	something	rex?	006e80d0	FUN_006e80d0	PUSH EBP
+Note	something	rex spirit kernel	0069196c	FUN_0069196c	PUSH EBP
+Note	something	i like this	0051d3c0	FUN_0051d3c0	PUSH EBP
+Note	something	bootleg	008069cf	FUN_008069cf	LEA EAX,[EBP + -0x8]
+Note	something	Triggers when FSM tap bombs	00491364	FUN_00491364	PUSH EBP
+Note	something	has input stuff	0058975c	LAB_0058975c	MOV byte ptr [ESI + 0x588]=>IsDeadLiarStick7,0x1
+Note	something	cases change these to ded_, fsm_, mng_, kgr_, bmm s19 ex1 ex2	0051d84b		CALL @LStrLAsg
+Note	something	looks big	0051d6de		MOV dword ptr [EBX + 0x6c]=>StellaRanking,EAX
+Note	something	tdgc	00484428	TDGCarad.Loaded	PUSH EBP
+Note	something	something interesting maybe	007f5aa3		PUSH 0x44000000
+Note	something	replay	007f1b34	FUN_007f1b34	PUSH EBP
+Note	something	this checks mode for subweapon/allows shoot	00589cf5		MOV param_1,dword ptr [ESI + 0x4c]=>DAT_00b1b1ec
+Note	something	buttonshiy	007c9edb		MOV byte ptr [Input_IsLeftHeld],0x1
+
+
+
+007fcdbc Scene_CutsceneRustedDragon

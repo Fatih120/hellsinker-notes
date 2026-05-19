@@ -1,0 +1,150 @@
+[HIGHSCORE DATA]
+Each score category is separated by 0x11940/72000 bytes.
+FSO and Short Mission scores are separated by 0x5DC0/24000 bytes.
+Each score of the same category (SPIRIT/KILL/TOKEN) is separated by 0x960/2400 bytes.
+Each entry of the same position (1,2,3,...,A) is separated by 0x12C/300 bytes.
+
+[STRUCTURE]
+
+FSO:86E294 Short:874054 GreatMajority:879E14 (SPIRITs):
+[{x} from 1 to 10]:
+	[Deadliar SPIRIT score no.{x}]
+	[Fossil Maiden SPIRIT score no.{x}]
+	[Minogame SPIRIT score no.{x}]
+	[Kagura SPIRIT score no.{x}]
+	[Test character SPIRIT score no.{x}]
+	[Non-existent character 6 SPIRIT score no.{x}] (free space)
+	[Non-existent character 7 SPIRIT score no.{x}]
+	[Non-existent character 8 SPIRIT score no.{x}]
+	(separated by 0x12C/300 bytes)
+
+FSO:87FBD4 Short:885994 GreatMajority:88B754 (KILLs):
+[{x} from 1 to 10]:
+	[Deadliar KILL score no.{x}]
+	[Fossil Maiden KILL score no.{x}]
+	[Minogame KILL score no.{x}]
+	[Kagura KILL score no.{x}]
+	[Test character SPIRIT score no.{x}]
+	[Non-existent character 6 KILL score no.{x}]
+	[Non-existent character 7 KILL score no.{x}]
+	[Non-existent character 8 KILL score no.{x}]
+	(separated by 0x12C/300 bytes)
+
+FSO:891514 Short:8972D4 GreatMajority:89D094 (TOKENS):
+[{x} from 1 to 10]:
+	[Deadliar TOKEN score no.{x}]
+	[Fossil Maiden TOKEN score no.{x}]
+	[Minogame TOKEN score no.{x}]
+	[Kagura TOKEN score no.{x}]
+	[Test character SPIRIT score no.{x}]
+	[Non-existent character 6 TOKEN score no.{x}]
+	[Non-existent character 7 TOKEN score no.{x}]
+	[Non-existent character 8 TOKEN score no.{x}]
+	(separated by 0x12C/300 bytes)
+
+Structure of an entry of the score array:
+[entry+0000]: score value
+[entry+0004]: stage where the player game-overed
+	0~8  → SG0, SG1, SG2, ..., SG9
+	9~10 → SG1, SG2
+	11~98→ SG+[a letter of the alphabet or a special character]
+	99   → SG100 (displayed as SG with a purple block on it)
+	100  → AL4
+	101  → AL3
+	102  → AL2
+	103  → AL1
+	104  → ALL
+	105  → PRA
+	106  → none, it is set to this value when the player finishes the game?
+[entry+0008]: {byte ptr} Spirit Breakthrough flag (indicated by the SP.B sprite)
+[entry+0009]: {byte ptr} Kill Breakthrough flag (indicated by the KL.B sprite)
+[entry+000A]: {byte ptr} Shrine flag (indicated by the SH.B sprite)
+[entry+000C]: Speed Control (AUT/MOM/ALT/TRI)
+[entry+0010]: Bootleg Ghost (ASP/SOL/ADE/AVE)
+[entry+001C]~[entry+0034]: {dword ptr} the 7 letters of the player name. If one of these values are equal to -1, the next letters won't be displayed.
+
+[START LOCATIONS]
+
+Full Sequence Order:
+	Deadliar:
+	• SPIRITs:	86E294
+	• KILLs:	87FBD4
+	• TOKENs:	891514
+	
+	Fossil Maiden:
+	• SPIRITs:	86E3C0
+	• KILLs:	87FD00
+	• TOKENs:	891640
+	
+	Minogame:
+	• SPIRITs:	86E4EC
+	• KILLs:	87FE2C
+	• TOKENs:	89176C
+	
+	Kagura:
+	• SPIRITs:	86E618
+	• KILLs:	87FF58
+	• TOKENs:	891898
+
+	Test character:
+	• SPIRITs:	86E744
+	• KILLs:	880084
+	• TOKENs:	8919C4
+
+Short Mission:
+	Deadliar:
+	• SPIRITs:	874054
+	• KILLs:	885994
+	• TOKENs:	8972D4
+	
+	Fossil Maiden:
+	• SPIRITs:	874180
+	• KILLs:	885AC0
+	• TOKENs:	897400
+	
+	Minogame:
+	• SPIRITs:	8742AC
+	• KILLs:	885BEC
+	• TOKENs:	89752C
+	
+	Kagura:
+	• SPIRITs:	8743D8
+	• KILLs:	885D18
+	• TOKENs:	897658
+	
+	Test character:
+	• SPIRITs:	874504
+	• KILLs:	885E44
+	• TOKENs:	897784
+	
+Join to The Great Majority:
+	Deadliar:
+	• SPIRITs:	879E14
+	• KILLs:	88B754
+	• TOKENs:	89D094
+	
+	Fossil Maiden:
+	• SPIRITs:	879F40
+	• KILLs:	88B880
+	• TOKENs:	89D1C0
+	
+	Minogame:
+	• SPIRITs:	87A06C
+	• KILLs:	88B9AC
+	• TOKENs:	89D2EC
+	
+	Kagura:
+	• SPIRITs:	87A198
+	• KILLs:	88BAD8
+	• TOKENs:	89D418
+	
+	Test character:
+	• SPIRITs:	879F40
+	• KILLs:	88B880
+	• TOKENs:	89D1C0
+	
+[SECTIONS OF CODE]
+Read all scores and show them:
+• SPIRITs:	761320
+• KILLs:	761389
+• TOKENs:	7613B7

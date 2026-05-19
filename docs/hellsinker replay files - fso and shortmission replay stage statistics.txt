@@ -1,0 +1,63 @@
+1A8F0A: start of chunk
+{
+	1A8F0A: EXTENDED (2 bytes each)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10 (hypothetical, a complete FSO is made of only 9 stages.)
+	}
+	1A8F1E: DAMAGED (2 bytes each)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	1A8F32: MISSED (2 bytes each)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	1A8F5A: PROTECTED (2 bytes each)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	1A8F6E: BT SPIRIT (2 bytes each, 0=false, otherwise true)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	1A8F82: BT KILL (2 bytes each, 0=false, otherwise true)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	1A8F96: continue used (2 bytes each, 0=false, otherwise true)
+	{
+		stage 1
+		stage 2
+		stage 3
+		...
+		stage 10
+	}
+	
+}
+1A8FAA: end of chunk (and end of file)
+
+Note: stages are in chronological order (1→2→3→...→Shrine→...→8 in FSO, varies based on what stages the player has chosen in a Short Mission replay).

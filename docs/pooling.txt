@@ -1,0 +1,24 @@
+The secrets of tick SPIRIT pooling in Hellsinker.
+
+While I still was doing a lot of Spirit scoreplays with Kagura4, I noticed something weird about the Spirit buffer overflow glitch occuring in Segment 8 when I bomb the gray stone-like enemies in Segment 8: the glitch only occurs in Full Sequence Order runs but never in stage practice. A fellow scoreplayer told me they experienced the same phenomenon when trying to milk Spirits from the Archives that appear before the Segment 8 boss using Kagura Moon Cradle. At the time I knew about two things that would give me hints of how tick Spirit pooling works: a variable I discovered few months ago which is responsible for this behaviour, as well as Tonnor explaining that tick Spirit gains are managed by a 3-frame buffer at the time of the discovery of the glitch. So I went to investigate about this and I was surprised of the complexity of the code and the numerous elements that influence this aspect of Spirit scoring.
+
+There are two commented screenshots of code if you want to understand how it works in more detail, but to make things simple:
+• The 3-frame buffer is increased only by hitting enemies with your bullets and is responsible for getting tick Spirits. It also has an influence on a Stella increase buffer, but only outside most boss fights.
+• The more Stella you have, the more Spirits you can get from hitting enemies.
+• The tick Spirit gain exponentially increases as you hit more enemies as you can see in the GIF below (when the second enemy appears, twice as more hits are inflicted, but the Spirit gain increases from ~350 to ~1100 instead of just doubling).
+• There is a variable that increases by 1 for each SLAVE enemy unchained and persists throughout the game. The more enemies you have destroyed through Unchains, the more tick Spirits you can pool.
+• Each stage has two constant values: the former is a value by which tick Spirit output is divided, and the latter is a negative or zero value that reduces the 3-frame buffer increase, meaning that hitting enemies pools a slightly different amount of Spirits from one stage to another.
+• Each character has a constant value by which the tick Spirit output is multiplied, meaning that some characters can get more Tick Spirits than others for the same number of hits inflicted before the buffer is updated.
+• Twice as less Spirits are pooled through hitting enemies during most boss fights.
+• Hitting some enemy types awards less Spirits and increases the Stella buffer by a stage-specific constant.
+• Hitting some other enemy types with any weapon or hitting with some subweapon bullets pools even less Spirits.
+
+The second, third and fourth images are screenshots of a program I created (see "Tick Spirit pooling visualizer" in download links) that plots a graph representing the number of Spirits gained according to the value of the player bullet hit buffer. The blue area in the graph is the buffer threshold (if buffer is equal or greater to this value, then the former is updated), and the red area is where the buffer overflow glitch happens.
+
+Documents:
+Increase SPIRITs and STELLA through player bullet hit buffer: https://www.mediafire.com/view/11to8z...
+How player bullet hit buffer is increased: https://www.mediafire.com/view/5idezi...
+
+Tools:
+Tick Spirit pooling visualizer: https://www.mediafire.com/file/lmwga4...
+Hit Spirit pooling test Auto-Assemble script (used for making the GIF): https://www.mediafire.com/file/6eqvug...

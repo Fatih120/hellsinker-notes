@@ -1,0 +1,11 @@
+Hellsinker. 1.009 reverse engineering of Token scoring
+
+I examined the TOKEN scoring mechanics and discovered many things useful to know for scoring, besides the 512 item limit I already know about since my Kag4 Token scoring videos.
+
+First of all, I figured out the score each Token item yield when collected (see first document, you can also download it at https://www.mediafire.com/file/rdaeas...)
+
+Next, I found the code that creates Luna droplets for each bullet near an enemy. It turns out that bullet erasure stars don't produce Luna droplets, and that the Luna droplet generation radius directly depends on the enemy's main hitbox radius: the formula is (hitbox size)+40 pixels. Document at https://www.mediafire.com/view/28xri0....
+
+I also reverse-engineered the code executed when collecting Luna crystals and Luna droplets to understand better how they yield Tokens. The score value of Luna crystals exponentially increases according to the crystal size (from 0.05 to ~0.33 Tokens), whereas Luna droplets give 4 times less Tokens during boss fights than during the rest of the game. Documents at https://www.mediafire.com/view/bwxg3k... and https://www.mediafire.com/view/v5b5lh....
+
+Finally, I analysed the section of code responsible for decreasing the number of Tokens during a boss fight. I first thought the Stella had a role in it (more Stella=less Tokens lost) but that's not the case at all: it just depends on the number of Tokens you already have in the current stage: you lose (0.00025+(current TOKEN/300000)) Tokens each frame. Document at https://www.mediafire.com/view/1s3is7....

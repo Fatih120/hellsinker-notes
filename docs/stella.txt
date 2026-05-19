@@ -1,0 +1,11 @@
+ Beetle-Omiwatari
+Beetle-Omiwatari
+1 year ago
+Stella changes between stages in Hellsinker. reverse-engineered!
+
+I wanted to examine this mechanic since it looked weird to me that in most of my plays, my Stella would decrease less after later stages, for example in my 21303 Kill run my Stella went from [A 0%] to [3 ~60%] after Segment 1 but it went from [A ~100%] to [4 ~70%] after Segment 7. So I thought Stella wouldn't decrease between stages as straightforwardly as a simple fixed percentage of Stella lost and I went to inspect the code behind that.
+
+Everything is described in the image below but to make things simple: 
+• There is a lower limit that builds up throughout the game depending on your number of lives and deaths at the end of the stage and prevents Stella from dropping below its value. It is divided by two if you only have 1 life remaining.
+• The game calculates a score that depends on the number of lives, Extends since the last Breakthrough or beginning of the game, total hits taken and a stage-specific value. The bigger this score, the bigger the percentage of Stella lost.
+• In addition to the life/Extend/survival score & percentage system, Stella also decreases by one or more levels depending on how few lives you have.

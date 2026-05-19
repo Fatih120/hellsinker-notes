@@ -1,0 +1,104 @@
+ Beetle-Omiwatari
+Beetle-Omiwatari
+7 months ago
+Hellsinker. shared Slave glitch in Segment 8 explained
+
+As seen in https://www.youtube.com/watch?v=cMECq... , a glitch can occur in Segment 8 where a MASTER central part of a laser wheel (Unnamed 491) can share its SLAVEs with a MASTER snake head (Unnamed 468).
+That means that if you kill either the central part of the laser wheel or the MASTER snake head after the glitch happens, the SLAVEs of both the laser wheel (Unnamed 492) and the snake head (Unnamed 469) get Unchained.
+
+In order to understand how it works, you'll have to understand how MASTERs, SLAVEs and Unchains work on the technical side.
+Enemies have a MASTER Unchain index number and a SLAVE Unchain number. A MASTER possesses all of the SLAVEs whose SLAVE Unchain index number is the same as said MASTER's MASTER Unchain index number. That means that if two MASTERs have the same MASTER Unchain Index number, SLAVEs can be possessed by both of them, and thus be Unchained by killing any of the two MASTERs.
+When enemies are created, they are placed into the first empty index of the array. When a central part of a laser wheel is created, the routine used to do create it assigns a SLAVE Unchain index number to it, but since it isn't supposed to be a SLAVE, its update function sets its MASTER Unchain index number to its SLAVE one. That means that for example, if it's placed at position 7 of the enemy array, its MASTER Unchain index number will be set to 7.
+That means that the glitch happens when a laser wheel is created at a position in the enemy array that matches the Unchain index numbers of one of the snake-formation waves, which vary between 8 and 15 depending on the order they appear in.
+
+
+
+
+
+
+
+The shared SLAVE glitch can occur during the first section of Segment 8 between a laser wheel (Unnamed 491 as MASTER and Unnamed 492 as SLAVEs) and a snake-formation wave (Unnamed 468 as MASTER, Unnamed 469 as SLAVEs).
+Its effect is to make both MASTERs share each other's SLAVEs, making their SLAVEs those of both MASTERs to which the glitch happens. After the glitch happens, destroying one of the two MASTERs involved in the glitch will Unchain all of the SLAVEs of both MASTERs.
+
+How the glitch works:
+
+Each MASTER has a MASTER Unchain index number, and each SLAVE of a MASTER has a SLAVE Unchain index number that matches the MASTER Unchain index number of its MASTER.
+When a MASTER is destroyed, all the SLAVEs which have the same SLAVE Unchain index number than its MASTER Unchain index are Unchained.
+Example as a list:
+
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.1)
+(SLAVE, SLAVE index no.3)
+(SLAVE, SLAVE index no.3)
+(SLAVE, SLAVE index no.3)
+(MASTER, MASTER index no.1)
+
+Once the MASTER is destroyed, the list becomes this following:
+
+(SLAVE, SLAVE index no.3)
+(SLAVE, SLAVE index no.3)
+(SLAVE, SLAVE index no.3)
+
+In actual play, this would be shown as red lines between the SLAVES that possess an Unchain index number of 1 and the MASTER that possesses the same Unchain index number, and the SLAVEs being Unchained once the MASTER has been destroyed, while sparing the SLAVES with an Unchain index number of 3.
+
+Enemies are inserted into the first empty space within the enemy array.
+Simplified pseudocode equivalent:
+    position = 0
+    while (enemyArray[position].exists): position += 1
+    define enemyArray[position] as new enemy
+
+The central part of the laser wheel is created by a specific enemy creation routine that pops three values and gives it a SLAVE Unchain index number according to its index number in the enemy array. As this enemy doesn't act like a SLAVE, it sets its MASTER Unchain index number to that supposedly SLAVE Unchain index number in its update routine.
+In simpler words, its MASTER unchain index is equal to its index number in the enemy array, and consequently to the index number of the first empty space in the enemy array at the moment before it occupied it.
+At the moment the central part of laser wheel is created, it itself creates its secondary parts that serve as its SLAVEs and have a SLAVE Unchain index number that matches the MASTER Unchain index number of the central part.
+
+Enemy array demonstration
+
+^ : where Unchain index of second snake-formation wave would point to if it pointed to an element of enemy array (see below)
++ : where laser wheel is placed
+e : any already existing enemy
+? : can be either an already-existing enemy or a blank space, doesn't have any effect on the glitch due to how new enemies are placed into the enemy array
+
+position (in hex): 0123456789ABCDEF
+enemy array:       eeeeeeeee+??????
+                            ^
+
+This is a representation of the enemy array at the moment this glitch happens with a laser wheel and the second snake-formation wave.
+Now let's see what happens in the enemy array when the glitch happens on a laser wheel and the third snake-formation wave:
+
+position (in hex): 0123456789ABCDEF
+enemy array:       eeeeeeeeee+?????
+                             ^
+
+And finally let's see what happens in the enemy array when the same glitch happens on a laser wheel and the fourth snake-formation wave:
+
+position (in hex): 0123456789ABCDEF
+enemy array:       eeeeeeeeeee+????
+                              ^
+
+You can see that its index number in the enemy array, and consequently its MASTER Unchain index number is always the same as the SLAVE and MASTER Unchain index numbers of the snake-formation wave it gets associated with via a MASTER/SLAVE relationship.
+
+
+Snake-formation wave Unchain index numbers:
+1st:   8
+2nd:   9
+3rd:  10
+4th:  11
+5th:  12
+6th:  13
+7th:  14
+8th:  15
+
+*after all laser wheels left the screen, so this glitch is impossible to perform after this moment*
+
+9th:   0
+10th:  1
+11th:  2
+
+*after music transition*
+
+12th:  0
+13th:  1
