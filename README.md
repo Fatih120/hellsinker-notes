@@ -19,6 +19,16 @@ Here is some base information on how Hellsinker was (probably) developed:
   - DirectX9
   - [Quadruple D](http://karen.saiin.net/~hayase/dddd/index.html) (API for DirectX components)
   - libvorbis
+  
+Do note that there are many different versions of Hellsinker. This does include the different patches and updates, but more importantly, there are three categories of the game worth mentioning:
+
+- [Booth.PM (DRM-less)](https://booth.pm/ja/items/1187721) (Purely JP release that needs patches)
+- [Steam Version](https://store.steampowered.com/app/1067720) (Has localizations enabled and was ahead in terms of updates, has Steam API/DRM)
+- [Hellsinker 0.95](https://www.vector.co.jp/download/file/win95/game/fh325441.html) ("Prototype" pre-release with lots of hidden unfinished content and almost unrecognizable)
+
+As you can see, things are a bit jumbled in terms of releases. These three are important to state due to the type of previous decompilation, which has been split between the "booth" v1.009 version and v0.95 and do not have parity with either the current 2024 Booth update or the Steam version (TODO: a timeline of versions).
+
+**Until this repo's attitude changes, newly-found/carry-over information will be based on the latest Booth.PM version of Hellsinker, which is important for static addresses and function parity.**
 
 ## How-to
 
@@ -33,6 +43,8 @@ Following tools are of importance:
 Follow instructions to import mappings into Ghidra, it's pretty handy but IDR itself is also pretty nifty for figuring out some things. For example, it knows the forms made in Delphi and can simulate them:
 
 <img width="1920" height="1200" alt="%pn_2026_0519-172117" src="https://github.com/user-attachments/assets/251cb3d3-9282-433f-b5ae-c5431dcef385" />
+
+Alternatively, I've included the IDC file in /tools.
 
 #### Ghidra Shared Server
 

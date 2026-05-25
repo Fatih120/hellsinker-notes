@@ -1,0 +1,87 @@
+HS_e.exe+14D190 - push ebp
+HS_e.exe+14D191 - mov ebp,esp
+HS_e.exe+14D193 - push ecx
+HS_e.exe+14D194 - push ebx
+HS_e.exe+14D195 - push esi
+HS_e.exe+14D196 - mov ebx,eax
+HS_e.exe+14D198 - imul eax,ebx,00000099
+HS_e.exe+14D19E - xor edx,edx
+HS_e.exe+14D1A0 - mov [eax*8+HS_e.exe+6838AC],edx
+HS_e.exe+14D1A7 - mov [eax*8+HS_e.exe+683424],000007D0
+HS_e.exe+14D1B2 - mov [eax*8+HS_e.exe+683430],00009C40
+HS_e.exe+14D1BD - mov [eax*8+HS_e.exe+683418],000186A0
+HS_e.exe+14D1C8 - mov byte ptr [eax*8+HS_e.exe+68340B],01
+HS_e.exe+14D1D0 - mov [eax*8+HS_e.exe+683438],00000006
+HS_e.exe+14D1DB - mov byte ptr [eax*8+HS_e.exe+683402],00
+HS_e.exe+14D1E3 - imul esi,ebx,00000099
+HS_e.exe+14D1E9 - mov eax,[esi*8+HS_e.exe+68344C]
+HS_e.exe+14D1F0 - mov edx,[HS_e.exe+46CD2C]
+HS_e.exe+14D1F6 - add edx,00000C80
+HS_e.exe+14D1FC - cmp eax,edx
+HS_e.exe+14D1FE - jg HS_e.exe+14D23E
+HS_e.exe+14D200 - mov edx,[HS_e.exe+46CD30]
+HS_e.exe+14D206 - sub edx,00000C80
+HS_e.exe+14D20C - cmp eax,edx
+HS_e.exe+14D20E - jl HS_e.exe+14D23E
+HS_e.exe+14D210 - mov eax,[esi*8+HS_e.exe+683450]
+HS_e.exe+14D217 - mov edx,[HS_e.exe+46CD38]
+HS_e.exe+14D21D - add edx,00000C80
+HS_e.exe+14D223 - cmp eax,edx
+HS_e.exe+14D225 - jg HS_e.exe+14D23E
+HS_e.exe+14D227 - mov eax,[esi*8+HS_e.exe+683450]
+HS_e.exe+14D22E - mov edx,[HS_e.exe+46CD34]
+HS_e.exe+14D234 - sub edx,00000C80
+HS_e.exe+14D23A - cmp eax,edx
+HS_e.exe+14D23C - jnl HS_e.exe+14D246
+HS_e.exe+14D23E - mov byte ptr [esi*8+HS_e.exe+683400],00
+HS_e.exe+14D246 - fild dword ptr [esi*8+HS_e.exe+68343C]
+HS_e.exe+14D24D - fld dword ptr [HS_e.exe+14D32C]
+HS_e.exe+14D253 - call HS_e.exe+3A04
+HS_e.exe+14D258 - fadd dword ptr [HS_e.exe+14D330]
+HS_e.exe+14D25E - fstp dword ptr [esi*8+HS_e.exe+6838BC]
+HS_e.exe+14D265 - wait 
+HS_e.exe+14D266 - test cl,cl
+HS_e.exe+14D268 - je HS_e.exe+14D30D
+HS_e.exe+14D26E - push 43D00000
+HS_e.exe+14D273 - push 43840000
+HS_e.exe+14D278 - push 44000000
+HS_e.exe+14D27D - push 43900000
+HS_e.exe+14D282 - mov eax,[HS_e.exe+46CD28]
+HS_e.exe+14D287 - add eax,00000140
+HS_e.exe+14D28C - mov [ebp-04],eax
+HS_e.exe+14D28F - fild dword ptr [ebp-04]
+HS_e.exe+14D292 - fild dword ptr [esi*8+HS_e.exe+68344C]
+HS_e.exe+14D299 - fld dword ptr [HS_e.exe+14D334]
+HS_e.exe+14D29F - call HS_e.exe+3A04
+HS_e.exe+14D2A4 - faddp 
+HS_e.exe+14D2A6 - add esp,-04
+HS_e.exe+14D2A9 - fstp dword ptr [esp]
+HS_e.exe+14D2AC - wait 
+HS_e.exe+14D2AD - fild dword ptr [esi*8+HS_e.exe+683450]
+HS_e.exe+14D2B4 - fld dword ptr [HS_e.exe+14D334]
+HS_e.exe+14D2BA - call HS_e.exe+3A04
+HS_e.exe+14D2BF - fadd dword ptr [HS_e.exe+14D338]
+HS_e.exe+14D2C5 - add esp,-04
+HS_e.exe+14D2C8 - fstp dword ptr [esp]
+HS_e.exe+14D2CB - wait 
+HS_e.exe+14D2CC - push [esi*8+HS_e.exe+6838BC]
+HS_e.exe+14D2D3 - push [esi*8+HS_e.exe+6838BC]
+HS_e.exe+14D2DA - push [esi*8+HS_e.exe+6838C0]
+HS_e.exe+14D2E1 - push 01
+HS_e.exe+14D2E3 - push 66
+HS_e.exe+14D2E5 - imul eax,[esi*8+HS_e.exe+68343C],08010402
+HS_e.exe+14D2F0 - mov ecx,FFFF80FF
+HS_e.exe+14D2F5 - sub ecx,eax
+HS_e.exe+14D2F7 - mov eax,[HS_e.exe+3CBEEC]
+HS_e.exe+14D2FC - mov eax,[eax+000003DC]
+HS_e.exe+14D302 - mov edx,[HS_e.exe+678574]
+HS_e.exe+14D308 - call HS_e.exe+84D6C
+HS_e.exe+14D30D - inc [esi*8+HS_e.exe+68343C]
+HS_e.exe+14D314 - cmp dword ptr [esi*8+HS_e.exe+68343C],1F
+HS_e.exe+14D31C - jle HS_e.exe+14D326
+HS_e.exe+14D31E - mov byte ptr [esi*8+HS_e.exe+683400],00
+HS_e.exe+14D326 - pop esi
+HS_e.exe+14D327 - pop ebx
+HS_e.exe+14D328 - pop ecx
+HS_e.exe+14D329 - pop ebp
+HS_e.exe+14D32A - ret 

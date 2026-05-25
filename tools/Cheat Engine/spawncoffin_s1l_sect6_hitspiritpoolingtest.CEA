@@ -1,0 +1,63 @@
+// Hit Spirit pooling test
+// by Beetle-Omiwatari
+// Play in Segment 1L and lock value of address A78364 to 6 for the script to work.
+// Stores the Spirit gain in a memory address you can see in Memory viewer (set Display type to 4-byte decimal for better readability)
+alloc(newmem,2048)
+label(spawnloop)
+label(spawnend)
+label(spawn)
+label(returnhere)
+label(exit)
+define(tickSpiritGain,newmem+$F80)
+
+newmem:
+cmp eax,06
+ja HS_e.exe+D18CD
+jne exit
+spawnloop:
+mov eax,[HS_e.exe+678368]
+cmp eax,20B
+je spawn
+cmp eax,2FC
+je spawn2
+
+spawnend:
+jmp HS_e.exe+D18CD
+
+spawn:
+push 03
+push 64
+push 3F000000
+mov ecx,00000000
+mov edx,-00002000
+mov eax,00000013
+call HS_e.exe+1112F4
+jmp exit
+
+spawn2:
+push 03
+push 64
+push 3F000000
+mov ecx,00000000
+mov edx,00002000
+mov eax,00000013
+call HS_e.exe+1112F4
+jmp exit
+
+exit:
+jmp returnhere
+
+newmem_750ACF:
+add [HS_e.exe+6784F0],eax
+mov [tickSpiritGain],eax
+jmp returnat_750ACF
+
+"HS_e.exe"+CE98D:
+jmp newmem
+nop 4
+returnhere:
+
+"HS_e.exe"+350ACF:
+jmp newmem_750ACF
+nop
+returnat_750ACF:

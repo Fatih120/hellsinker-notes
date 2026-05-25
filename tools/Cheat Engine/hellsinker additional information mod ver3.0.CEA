@@ -1,0 +1,1292 @@
+// Hellsinker. additional information mod ver. 3.0
+// by Beetle-Omiwatari
+// Displays additional information on the HUD such as the number of bullets, enemies, items, etc...
+// Displays:
+// • Number of bullets onscreen
+// • Number of enemies
+// • Number of items
+// • Number of Token items
+// • Number of Ingots
+// • Number of cancelled bullets during the last bullet cancel event
+// • Number of converted bullets (in other words, the number of items generated during the last bullet cancel event)
+// • Number of crystals collected in Shrine of Farewell (added in version 1.1)
+// • Two fractional digits added to the TIMER for a more precise time display (added in version 2.0)
+// • TIMER in frames (added in version 2.0)
+// • Stage clear time in the LAST RECORDS tab in load/save replay menus (added in version 2.0)
+// • Loadout used (for Deadliar and Kagura) in load/save replay menus, next to Bootleg Ghost (added in version 2.0)
+// • Number of Extends and Immortality bonuses during play (added in version 2.0)
+// • Number of player bullets (added in version 3.0)
+// • Number of deaths (added in version 3.0)
+// • Total time (added in version 3.0)
+// • Time between the beginning of the play and Spirit and Kill Breakthroughs (added in version 3.0)
+
+alloc(newmem,16384)
+label(returnhere)
+label(originalcode)
+label(exit)
+define(bulletcount,newmem+$3C00)
+define(prayercount,newmem+$3C02)
+define(totalitemcount,newmem+$3C04)
+define(tokenitemcount,newmem+$3C06)
+define(ingotcount,newmem+$3C08)
+define(cancelledcount,newmem+$3C0A)
+define(convertedcount,newmem+$3C0C)
+define(crystalcount,newmem+$3C0E)
+define(extendCount,newmem+$3C10)
+define(immortalityCount,$00A78494)
+define(deathCount,newmem+$3C11)
+define(damageCount,HS_e.exe+678504)
+define(playerBulletCount,newmem+$3C14)
+define(bltCancelFlag,newmem+$3C18)
+define(nonZeroDigitFlag,newmem+$3C18)
+define(timerDecimals,newmem+$3C19)
+define(timerStrPos,newmem+$3C1A)
+define(counter,newmem+$3C1E)
+define(counter2,newmem+$3C22)
+define(lastRecordTime,newmem+$3C26)
+define(float1,newmem+$3C2A)
+define(float2,newmem+$3C2E)
+define(repLR_timeChara,newmem+$3C36)
+define(repLR_timeCharaEnd,newmem+$3C3E)
+define(totalTimer,newmem+$3C50)
+define(timeWhenSpiritBT,newmem+$3C54)
+define(timeWhenKillBT,newmem+$3C58)
+define(jumpTo,newmem+$3CE0) // Reserved to some routines
+define(multiStageRep_timer,newmem+$3D00) // $3D00~3D4C (up to 20 replays)
+define(multiStageRep_loadout,newmem+$3E00) // $3E00~3E13 (up to 20 replays)
+define(bulletArrayLocation,$00B96414)
+define(prayerArrayLocation,$00B2C414)
+define(itemArrayLocation,$0078BE8C)
+define(playerBulletArrayLocation,$00A83400)
+define(mainTimer,HS_e.exe+3CC738)
+
+newmem: //this is allocated memory, you have read,write,execute access
+resetCounters:
+mov word ptr [bulletcount],$0000
+mov word ptr [prayercount],$0000
+mov word ptr [totalitemcount],$0000
+mov word ptr [tokenitemcount],$0000
+mov word ptr [ingotcount],$0000
+mov word ptr [playerBulletCount],$0000
+cmp [HS_e.exe+3CC73C],01 // When starting playing, reset cancel and convert counters to 0
+jne countObjects
+resetCancelledAtStart:
+mov word ptr [cancelledcount],$0000
+mov word ptr [convertedcount],$0000
+mov word ptr [crystalcount],$0000
+countObjects:
+mov esi,00000280 // Prayer bullet array can store up to 640 objects
+countBulletsLoop:
+dec esi
+mov eax,000004C8 // The start address of each object is separated by 0x4C8 bytes.
+imul eax,esi
+add eax,bulletArrayLocation
+cmp byte ptr [eax],00
+je afterCountingBullet
+inc word ptr [bulletcount]
+afterCountingBullet:
+cmp esi,00
+jne countBulletsLoop
+mov esi,00000100 // Prayer array can store up to 256 objects
+countPrayersLoop:
+dec esi
+mov eax,00000690
+imul eax,esi
+add eax,prayerArrayLocation
+cmp byte ptr [eax+02],00
+je afterCountingPrayer
+inc word ptr [prayercount]
+afterCountingPrayer:
+cmp esi,00
+jne countPrayersLoop
+mov esi,00000200 // Item array can store up to 512 objects
+countItemsLoop:
+dec esi
+mov eax,0000008C
+imul eax,esi
+add eax,[itemArrayLocation]
+cmp byte ptr [eax],00
+je afterCountingItem
+inc word ptr [totalitemcount]
+cmp byte ptr [eax+10],01 // Count the number of LUNA crystals
+je countTokenItem
+cmp byte ptr [eax+10],04 // Count the number of Ingots
+je countIngot
+cmp byte ptr [eax+10],07 // Count the number of TERRA tokens
+je countTokenItem
+cmp byte ptr [eax+10],0A // Count the number of bullet cancel LUNA items
+je countTokenItem
+cmp byte ptr [eax+10],0D // Count the number of LUNA droplets
+je countTokenItem
+jmp afterCountingItem
+countTokenItem:
+inc word ptr [tokenitemcount]
+jmp afterCountingItem
+countIngot:
+inc word ptr [ingotcount]
+afterCountingItem:
+cmp esi,00
+jne countItemsLoop
+countPlayerBullets:
+mov esi,00000100 // Player bullet array can store up to 256 objects
+countPlayerBulletsLoop:
+dec esi
+mov eax,000004C8 // The start address of each object is separated by 0x4C8 bytes.
+imul eax,esi
+add eax,playerBulletArrayLocation
+cmp byte ptr [eax],00
+je afterCountingPlayerBullets
+inc word ptr [playerBulletCount]
+afterCountingPlayerBullets:
+cmp esi,00
+jne countPlayerBulletsLoop
+
+display:
+// Display number of bullets
+push 40380000
+push 00
+push 40706000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[bulletcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringBullets+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of enemies
+push 40380000
+push 00
+push 40712000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[prayercount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringPrayers+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display total number of items
+push 40804000
+push 00
+push 4073F000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[totalitemcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringTotalItems+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of token items
+push 40804000
+push 00
+push 40733000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[tokenitemcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringTokenItems+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of Ingots
+push 40380000
+push 00
+push 4071E000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[ingotcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringIngots+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of player bullets
+push 40380000
+push 00
+push 4072A000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[playerBulletCount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringPlayerBullets+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of bullets cancelled during the last bullet cancel event
+push 40380000
+push 00
+push 4074E000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[cancelledcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringCancelled+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of items generated by the last bullet cancel
+push 40380000
+push 00
+push 40758000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[convertedcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringConverted+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of crystals collected in Shrine of Farewell
+push 40380000
+push 00
+push 40762000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov ax,[crystalcount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringCrystals+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of Immortality bonuses
+push 405D0000
+push 00
+push 405B0000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,[extendCount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringPlusNumber+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display number of extends
+push 405D0000
+push 00
+push 405D8000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,[immortalityCount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringI+4
+call HS_e.exe+5730
+mov eax,FF50FFFF
+mov edx,[ebp-000000FC]
+call HS_e.exe+C42E0
+// Display number of deaths
+push 405D0000
+push 00
+push 40600000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,[deathCount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringMinus+4
+call HS_e.exe+5730
+mov eax,FFFF3333
+mov edx,[ebp-000000FC]
+call HS_e.exe+C42E0
+// Display number of hits
+push 405D0000
+push 00
+push 40614000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,[damageCount]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov byte ptr [stringOneChar+4],$48
+mov edx,stringOneChar+4
+call HS_e.exe+5730
+mov eax,FFEE6666
+mov edx,[ebp-000000FC]
+call HS_e.exe+C42E0
+// Display TIMER as frames
+push 40804000
+push 00
+push 4075A000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-000000FC]
+mov eax,[mainTimer]
+call HS_e.exe+9628
+mov ecx,[ebp-000000FC]
+lea eax,[ebp-00000100]
+mov edx,stringTimerFrames+4
+call HS_e.exe+5730
+mov eax,[ebp-00000100]
+call HS_e.exe+C3F00
+mov ecx,[ebp-000000FC]
+lea eax,[ebp-00000100]
+mov edx,stringSpace+4
+call HS_e.exe+5730
+// Set timer decimals
+mov eax,[mainTimer]
+call setTimerDecimals
+// Display TIMER fractional digits
+push 40830000
+push 00
+push 4075A000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,byte ptr [timerDecimals]
+call HS_e.exe+9628
+cmp byte ptr [timerDecimals],0A
+jl timerDecimalsUnder10
+jmp timerDecimalsNotUnder10
+timerDecimalsUnder10:
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringDotZero+4
+call HS_e.exe+5730
+jmp timerDecimalsNotUnder10_after
+timerDecimalsNotUnder10:
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringTimerSeconds+4
+call HS_e.exe+5730
+timerDecimalsNotUnder10_after:
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+// Display total time if current run is a multi-stage run
+cmp [HS_e.exe+678530],0B // remove this line and the next one if total timer doesn't always show during FSO/Short Mission plays
+jne afterDisplayingTotalTime // remove this line and the previous one if total timer doesn't always show during FSO/Short Mission plays
+push 40806000
+push 00
+push 40763000
+push 00
+push 3F800000
+push 3F800000
+mov eax,stringTotalTime+4
+mov edx,$00
+call HS_e.exe+C3F00
+
+// Display total time decimals
+push 40832000
+push 00
+push 40763000
+push 00
+push 3F800000
+push 3F800000
+mov eax,[totalTimer]
+call setTimerDecimals
+
+lea edx,[ebp-00000100]
+mov eax,00000000
+mov al,byte ptr [timerDecimals]
+call HS_e.exe+9628
+call addZeroToTimerDecimals
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+
+// Display total time integer part
+mov eax,[totalTimer]
+mov edx,0
+mov ecx,3C
+idiv ecx
+call getNumberOfDigits
+push eax
+mov eax,8
+mov edx,0
+mov ecx,[counter]
+imul ecx
+mov edx,0
+mov ebx,eax
+mov eax,264
+sub eax,ebx
+mov [float1],eax
+pop eax
+fild [float1]
+add esp,-08
+fstp qword ptr [esp] // convert to quadword
+push 40763000
+push 00
+push 3F800000
+push 3F800000
+lea edx,[ebp-00000100]
+call HS_e.exe+9628
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringNone+4
+call HS_e.exe+5730
+mov eax,[ebp-000000FC]
+call HS_e.exe+C3F00
+afterDisplayingTotalTime:
+
+originalcode:
+push 40560000
+
+exit:
+jmp returnhere
+
+addZeroToTimerDecimals:
+cmp byte ptr [timerDecimals],0A
+jl addZeroToTimerDecimals_timerDecimalsUnder10
+jmp addZeroToTimerDecimals_timerDecimalsNotUnder10
+addZeroToTimerDecimals_timerDecimalsUnder10:
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringDotZero+4
+call HS_e.exe+5730
+jmp addZeroToTimerDecimals_timerDecimalsNotUnder10_after
+addZeroToTimerDecimals_timerDecimalsNotUnder10:
+mov ecx,[ebp-00000100]
+lea eax,[ebp-000000FC]
+mov edx,stringTimerSeconds+4
+call HS_e.exe+5730
+addZeroToTimerDecimals_timerDecimalsNotUnder10_after:
+ret
+
+setTimerDecimals:
+mov edx,0
+mov ecx,64
+imul ecx
+mov edx,0
+mov ecx,3C
+idiv ecx
+mov edx,0
+mov ecx,64
+idiv ecx
+mov byte ptr [timerDecimals],dl
+ret
+
+getNumberOfDigits: // number of digits -> [counter]
+push eax
+mov [counter],00
+getNumberOfDigits_loop:
+inc [counter]
+mov edx,0
+mov ecx,0a
+idiv ecx
+test eax,eax
+jg getNumberOfDigits_loop
+pop eax
+ret
+
+drawTimerIfSPBT:
+push 00
+push 41000000
+// before this line is original code
+// set position
+push 441BC000
+push 42D40000
+// draw
+mov eax,timeWhenSpiritBT
+call drawBreakthroughTimer
+jmp HS_e.exe+BD920
+
+drawTimerIfKLBT:
+push 00
+push 41000000
+// before this line is original code
+// set position
+push 441BC000
+push 433A0000
+// draw
+mov eax,timeWhenKillBT
+call drawBreakthroughTimer
+jmp HS_e.exe+BE7E9
+
+drawBreakthroughTimer:
+mov [counter2],00
+mov eax,[eax]
+mov ebx,64 // *100
+imul ebx
+mov ebx,3C // /60
+mov edx,00
+idiv ebx
+drawBreakthroughTimer_digits_loop:
+cmp [counter2],02
+jne drawBreakthroughTimer_digits_loop_digit
+drawBreakthroughTimer_digits_loop_decimalPoint:
+mov eax,E
+jmp drawBreakthroughTimer_digits_loop_digit_after
+drawBreakthroughTimer_digits_loop_digit:
+//divide
+mov ebx,0A // /10
+mov edx,00
+idiv ebx
+mov [counter],eax
+mov eax,edx
+add eax,10
+drawBreakthroughTimer_digits_loop_digit_after:
+
+//draw
+push [esp+8]
+push [esp+8]
+mov ecx,FF7BC2FD
+call drawWhiteChar
+//offset next character 8 pixels left
+
+push -08
+fild [esp]
+fadd [esp+C]
+fstp [esp+C]
+pop eax
+
+mov eax,[counter]
+//loop (if 4th digit or after & remainder)
+inc [counter2]
+cmp [counter2],04
+jl drawBreakthroughTimer_digits_loop
+test eax,eax
+jne drawBreakthroughTimer_digits_loop
+
+mov ebx,[esp]
+add esp,C
+jmp ebx
+
+drawWhiteChar:
+push eax
+mov eax,[esp+4]
+mov [jumpTo],eax
+pop eax
+mov [esp-4],0100
+mov [esp-8],00
+mov [esp-C],0108
+mov [esp-10],08
+
+// add X sprite rect coords
+mov ebx,eax
+and eax,07 // modulo 8
+shl eax,3 // multiply by 8
+mov [float1],eax
+fild [float1]
+fiadd [esp-4]
+fstp [esp-4]
+fild [float1]
+fiadd [esp-C]
+fstp [esp-C]
+
+// add Y sprite rect coords
+mov eax,ebx
+shr eax,3 // divide by 8
+shl eax,3 // multiply by 8
+mov [float1],eax
+fild [float1]
+fiadd [esp-8]
+fstp [esp-8]
+fild [float1]
+fiadd [esp-10]
+fstp [esp-10]
+
+add esp,-10
+push [esp+18] // push X
+push [esp+18] // push Y
+push 3F800000
+push 3F800000
+push 00
+push 00
+push 0000007C
+mov eax,[HS_e.exe+3CBEEC]
+mov eax,[eax+000003DC]
+mov edx,[HS_e.exe+678588]
+call HS_e.exe+84AD8
+add esp,0C // Pop 2 values without storing them
+jmp [jumpTo]
+
+convert1newmem:
+// additional code
+cmp word ptr [bulletcount],00
+je convert1newmem_original
+mov word ptr [cancelledcount],$0000
+mov word ptr [convertedcount],$0000
+mov byte ptr [bltCancelFlag],$01
+convert1newmem_original: // original code
+xor eax,eax
+mov [ebp-30],eax
+jmp HS_e.exe+35584D
+convert1newmem2:
+// additional code
+inc word ptr [cancelledcount]
+// original code
+mov eax,[ebp-00000114]
+mov byte ptr [eax],00
+jmp HS_e.exe+35586B
+convert1End_newmem:
+mov eax,[ebp-000000E0]
+mov byte ptr [bltCancelFlag],$00
+jmp HS_e.exe+3558BA
+
+convert2newmem:
+// additional code
+cmp word ptr [bulletcount],00
+je convert2newmem_original
+mov word ptr [cancelledcount],$0000
+mov word ptr [convertedcount],$0000
+mov byte ptr [bltCancelFlag],$01
+convert2newmem_original: // original code
+push ebp
+mov ebp,esp
+push ebx
+push esi
+jmp HS_e.exe+BC265
+convert2newmem2:
+// additional code
+inc word ptr [cancelledcount]
+// original code
+push 00
+push 00
+mov ecx,[ebx+50]
+jmp HS_e.exe+BC292
+convert2End_newmem:
+jne HS_e.exe+BC272
+pop edi
+pop esi
+pop ebx
+mov byte ptr [bltCancelFlag],$00
+jmp HS_e.exe+BC2A8
+
+itemgen1_newmem:
+cmp byte ptr [bltCancelFlag],00
+je itemgen1_original
+inc [convertedcount]
+itemgen1_original:
+mov ebx,esi
+mov byte ptr [ebx],01
+jmp HS_e.exe+11203B
+
+itemgen2_newmem:
+cmp byte ptr [bltCancelFlag],00
+je itemgen2_original
+inc [convertedcount]
+itemgen2_original:
+mov ebx,esi
+mov byte ptr [ebx],01
+jmp HS_e.exe+111FAB
+
+collectCrystal_newmem:
+add [HS_e.exe+6784E4],eax
+inc word ptr [crystalcount]
+jmp HS_e.exe+353162
+
+displayTime_replayLastRecords_left:
+call HS_e.exe+C3F00
+mov eax,[ebp-6C]
+add eax,000000A0
+mov [ebp-0002686C],eax
+fild dword ptr [ebp-0002686C]
+add esp,-08
+fstp qword ptr [esp]
+wait
+lea eax,[edi+00000170]
+mov [ebp-00026884],eax
+fild dword ptr [ebp-00026884]
+add esp,-08
+fstp qword ptr [esp]
+wait
+push 3F800000
+push 3F800000
+mov eax,stringTimeLastRecords+4
+call HS_e.exe+C3F00
+jmp HS_e.exe+3733AC
+
+displayTime_replayLastRecords_right:
+call HS_e.exe+84AD8
+cmp [ebp-28],-2
+je displayTime_replayLastRecords_right_getLastRecordTime_MultiStage // Load time for FSO replays
+cmp [ebp-28],-1
+je displayTime_replayLastRecords_right_getLastRecordTime_MultiStage // Load time for Short Mission replays
+// For one-stage replays (Segment Location/EX1/EX2)
+imul eax,[ebp-70],00000113
+imul edx,[HS_e.exe+8A9A24],00000ABE
+lea edx,[ebp+edx*8-00020518]
+mov eax,[edx+eax*4]
+mov [lastRecordTime],eax
+jmp displayTime_replayLastRecords_right_afterGettingLastRecordTime
+// For multi-stage replays (FSO/Short)
+displayTime_replayLastRecords_right_getLastRecordTime_MultiStage:
+mov eax,[ebp-70]
+mov eax,[multiStageRep_timer+eax*4]
+mov [lastRecordTime],eax
+jmp displayTime_replayLastRecords_right_afterGettingLastRecordTime
+
+displayTime_replayLastRecords_right_afterGettingLastRecordTime:
+mov ecx,64
+imul ecx
+mov ecx,3C
+idiv ecx
+mov [lastRecordTime],eax
+// Store the digits
+mov [counter],09
+mov eax,[lastRecordTime]
+mov [counter2],repLR_timeCharaEnd
+displayTime_replayLastRecords_right_storeTimeDigits_loop:
+dec [counter]
+mov ebx,00
+mov ecx,0A
+mov edx,00
+idiv ecx // Divide eax by 10
+mov bl,dl // Set each digit to the modulo
+inc bl // Increment BL, otherwise 1 will be displayed as 0, 2 as 1, 3 as 2, etc...
+displayTime_replayLastRecords_right_loop_blankZero:
+mov edx,[counter2]
+mov byte ptr [edx],bl // Load each digit
+dec [counter2]
+cmp [counter],00
+jne displayTime_replayLastRecords_right_storeTimeDigits_loop
+mov [counter],00
+mov byte ptr [nonZeroDigitFlag],00
+displayTime_replayLastRecords_right_displayTimeDigits_loop:
+// Display the digits
+mov ebx,[counter]
+mov ecx,00
+mov cl,byte ptr [repLR_timeChara+ebx]
+cmp cl,01 // Check if digit is yellow 0
+je displayTime_replayLastRecords_right_displayTimeDigits_loop_setNZDFlag_after
+mov byte ptr [nonZeroDigitFlag],01
+displayTime_replayLastRecords_right_displayTimeDigits_loop_setNZDFlag_after:
+cmp byte ptr [nonZeroDigitFlag],00
+jne displayTime_replayLastRecords_right_displayTimeDigits_loop_setToBlankZero_after
+mov cl,00
+displayTime_replayLastRecords_right_displayTimeDigits_loop_setToBlankZero_after:
+imul ecx,8
+mov [float1],ecx
+fild [float1]
+fstp [float1]
+push [float1]
+push 42400000
+mov [float2],41000000
+fld [float1]
+fadd [float2]
+fstp [float1]
+push [float1]
+push 42800000
+lea eax,[148+ebx*8] // 148 is the initial X position, *8 is the character spacing
+mov [float1],eax
+fild [float1]
+fstp [float1]
+push [float1]
+lea eax,[edi+170] // 148 is the initial X position, *8 is the character spacing
+mov [float1],eax
+fild [float1]
+fstp [float1]
+push [float1]
+push 3F800000
+push 3F800000
+push 00
+push 00
+push 0000009F
+mov eax,[HS_e.exe+3CBEEC]
+mov eax,[eax+000003DC]
+mov ecx,40FFFFFF
+cmp byte ptr [counter],07
+jl displayTime_replayLastRecords_right_darken_after
+mov ecx,40808080 // Darken the two last digits
+displayTime_replayLastRecords_right_darken_after:
+mov edx,[HS_e.exe+678574]
+call HS_e.exe+84AD8 // Display the digits as sprites
+inc [counter]
+cmp [counter],09
+jne displayTime_replayLastRecords_right_displayTimeDigits_loop
+
+
+jmp HS_e.exe+373988
+
+loadMultiStageReplay_Stage1Timer: // Reset the time record to that of stage 1
+call HS_e.exe+301C
+push ecx
+mov ecx,[esi-08] // [esi-08] is the slot ID
+mov eax,[esi] // [esi] is the currently loaded stage timer
+mov [multiStageRep_timer+ecx*4],eax
+// By the same occasion, also keep in memory the loadout number used in each replay
+mov eax,[esi+18] // [esi+18] is the loadout used during the run
+mov byte ptr [multiStageRep_loadout+ecx],al
+pop ecx
+jmp HS_e.exe+C5F63
+
+loadMultiStageReplay_Stage2Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C5F7D
+
+loadMultiStageReplay_Stage3Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C5F98
+
+loadMultiStageReplay_Stage4Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C5FB3
+
+loadMultiStageReplay_Stage5Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C5FCE
+
+loadMultiStageReplay_Stage6Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C5FE9
+
+loadMultiStageReplay_Stage7Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C6004
+
+loadMultiStageReplay_Stage8Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C601F
+
+loadMultiStageReplay_Stage9Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C603A
+
+loadMultiStageReplay_Stage10Timer:
+call HS_e.exe+301C
+call loadMultiStageReplay_StageAfter1Timer_call
+jmp HS_e.exe+C6055
+
+loadMultiStageReplay_StageAfter1Timer_call: // Add current stage time record to loaded replay time record
+// Check if Segment number is not -1 (meaning that there's no stage played, solving a FSO replay play time display bug)
+mov eax,[esi+04] // [esi+04] is the stage ID
+test eax,eax
+js loadMultiStageReplay_StageAfter1Timer_call_after // Jump if Segment number is -1 (or negative)
+push ecx
+mov ecx,[esi-08] // [esi-08] is the slot ID
+mov eax,[multiStageRep_timer+ecx*4]
+add eax,[esi] // Adds current stage timer to total game clear time
+mov [multiStageRep_timer+ecx*4],eax
+pop ecx
+loadMultiStageReplay_StageAfter1Timer_call_after:
+ret
+
+replayMenu_displayLoadout_localVariables:
+db 80 00 00 00
+db 00 00 00 43
+db 00 00 10 43
+db 00 00 00 00
+db 00 00 00 00
+db 90 00 00 00
+db 00 00 00 00
+replayMenu_displayLoadout_stringReferences:
+dd stringDeadliarFollowing
+dd stringDeadliarSolitude
+dd stringDeadliarKuguzMaru
+dd stringDeadliar4
+replayMenu_displayLoadout:
+mov eax,esi
+shl eax,04
+add eax,[replayMenu_displayLoadout_localVariables]
+add eax,edi
+mov [ebp-0002686C],eax
+fild dword ptr [ebp-0002686C]
+fstp dword ptr [ebp-0002686C]
+mov eax,[ebp-0002686C]
+mov [replayMenu_displayLoadout_localVariables+18],eax // Y coordinate for inserting the loadout in replay menus
+mov eax,[HS_e.exe+8A9A24]
+lea eax,[eax+eax*4]
+cmp byte ptr [ebx+eax*4],00
+je replayMenu_displayLoadout_end
+mov eax,esi
+imul eax,[HS_e.exe+8A9A24],00000ABE
+mov edx,[ebp-000000FC]
+cmp [ebp-28],00
+jl replayMenu_displayLoadout_setEAX_MultiStage
+mov eax,[edx+eax*8+18]
+jmp replayMenu_displayLoadout_deadOrKag
+replayMenu_displayLoadout_setEAX_MultiStage:
+mov eax,00000000
+mov al,byte ptr [multiStageRep_loadout+esi]
+replayMenu_displayLoadout_deadOrKag:
+cmp [HS_e.exe+8A9A24],00
+je replayMenu_displayLoadout_Deadliar
+cmp [HS_e.exe+8A9A24],03
+je replayMenu_displayLoadout_Kagura
+jmp replayMenu_displayLoadout_end
+replayMenu_displayLoadout_Deadliar: // Show Deadliar's Misteltoe loadout
+push 40778000
+push 00
+fld [replayMenu_displayLoadout_localVariables+18]
+add esp,-08
+fstp qword ptr [esp] // Doing this so that the loadout texts don't get exponentially far from each other
+push 3F800000
+push 3F800000
+lea edx,[replayMenu_displayLoadout_stringReferences+eax*4]
+mov edx,[edx]
+lea edx,[edx+4]
+mov eax,FF00FFC0
+call HS_e.exe+C42E0 // Print text
+jmp replayMenu_displayLoadout_end
+replayMenu_displayLoadout_Kagura: // Display Kagura's loadout kanji name for each replay
+imul eax,10
+mov [replayMenu_displayLoadout_localVariables+C],eax
+push 432C0000 // 172.00
+fld [replayMenu_displayLoadout_localVariables+4] // Coordinates of sprite top
+fiadd [replayMenu_displayLoadout_localVariables+C]
+fstp [replayMenu_displayLoadout_localVariables+10] // Stores the floating point value to push it on the stack
+push [replayMenu_displayLoadout_localVariables+10]
+push 43800000 // 256.00
+fld [replayMenu_displayLoadout_localVariables+8] // Coordinates of sprite bottom
+fiadd [replayMenu_displayLoadout_localVariables+C]
+fstp [replayMenu_displayLoadout_localVariables+10]
+push [replayMenu_displayLoadout_localVariables+10]
+push 43D00000 // 416
+push [replayMenu_displayLoadout_localVariables+18]
+push 3F800000
+push 3F800000
+push 00
+push 00
+push 000000A0
+mov eax,[HS_e.exe+3CBEEC]
+mov eax,[eax+000003DC]
+or ecx,-01
+mov edx,[HS_e.exe+6785D4]
+call HS_e.exe+84AD8
+replayMenu_displayLoadout_end:
+inc esi
+add [ebp-000000FC],0000044C
+jmp HS_e.exe+3716D4
+
+resetExtendAndDeathCount:
+mov [HS_e.exe+678490],eax
+mov [totalTimer],eax
+mov [deathCount],eax
+mov byte ptr [extendCount],al
+ret
+
+incrementExtendCount:
+inc byte ptr [extendCount]
+mov eax,[HS_e.exe+6821F4]
+jmp HS_e.exe+34BE3D
+
+incrementExtendCount_Revive:
+inc [HS_e.exe+6821F4]
+inc byte ptr [extendCount]
+jmp HS_e.exe+353283
+
+incrementExtendCount_SPBT: // Spirit Breakthrough
+mov byte ptr [HS_e.exe+6784AC],01
+inc byte ptr [extendCount]
+push eax
+mov eax,[totalTimer]
+mov [timeWhenSpiritBT],eax
+pop eax
+jmp HS_e.exe+34C0F5
+
+incrementExtendCount_KLBT: // Kill Breakthrough
+mov byte ptr [HS_e.exe+6784AD],01
+inc byte ptr [extendCount]
+push eax
+mov eax,[totalTimer]
+mov [timeWhenKillBT],eax
+pop eax
+jmp HS_e.exe+34C380
+
+incrementDeathCount: // Increment death count when player loses a life
+dec [HS_e.exe+6821F4]
+inc byte ptr [deathCount]
+ret
+
+manageTime: // Manage total time
+inc [mainTimer]
+inc [totalTimer]
+ret
+
+// All strings are located here
+stringSpace:
+db 01 00 00 00
+db 20
+db ff ff ff ff
+stringBullets:
+db 08 00 00 00
+db 42 55 4C 4C 45 54 53 3A
+db ff ff ff ff
+stringPrayers:
+db 08 00 00 00
+db 50 52 41 59 45 52 53 3A
+db ff ff ff ff
+stringTotalItems:
+db 0A 00 00 00
+db 54 4F 54 41 4C 49 54 45 4D 3A
+db ff ff ff ff
+stringTokenItems:
+db 0A 00 00 00
+db 54 4F 4B 45 4E 49 54 45 4D 3A
+db ff ff ff ff
+stringIngots:
+db 08 00 00 00
+db 49 4E 47 4F 54 53 3A 20
+db ff ff ff ff
+stringPlayerBullets:
+db 08 00 00 00
+db 50 2E 42 4C 54 53 3A 20
+db ff ff ff ff
+stringCancelled:
+db 0A 00 00 00
+db 43 41 4E 43 45 4C 4C 45 44 3A
+db ff ff ff ff
+stringConverted:
+db 0A 00 00 00
+db 43 4F 4E 56 45 52 54 45 44 3A
+db ff ff ff ff
+stringCrystals:
+db 0A 00 00 00
+db 43 52 59 53 54 41 4C 53 3A 20
+db ff ff ff ff
+stringPlusNumber:
+db 01 00 00 00
+db 2B
+db ff ff ff ff
+stringMinus:
+db 01 00 00 00
+db 2D
+db ff ff ff ff
+stringI:
+db 01 00 00 00
+db 49
+db ff ff ff ff
+stringOneChar:
+db 01 00 00 00
+db 00
+db ff ff ff ff
+stringTimerFrames:
+db 01 00 00 00
+db 46
+db ff ff ff ff
+stringTimerSeconds:
+db 01 00 00 00
+db 2E
+db ff ff ff ff
+stringDotZero:
+db 02 00 00 00
+db 2E 30
+db ff ff ff ff
+stringTotalTime:
+db 06 00 00 00
+db 54 4f 54 41 4c 3A
+db ff ff ff ff
+stringTimeLastRecords:
+db 0A 00 00 00
+db 54 49 4D 45 20 20 20 20 20 3A
+db ff ff ff ff
+stringDeadliarFollowing:
+db 0C 00 00 00
+db 31 3C 46 4F 4C 4C 4F 57 49 4E 47 3E
+db ff ff ff ff
+stringDeadliarSolitude:
+db 0B 00 00 00
+db 32 3C 53 4F 4C 49 54 55 44 45 3E
+db ff ff ff ff
+stringDeadliarKuguzMaru:
+db 0D 00 00 00
+db 33 3C 4B 55 47 55 5A 2D 4D 41 52 55 3E
+db ff ff ff ff
+stringDeadliar4:
+db 01 00 00 00
+db 34
+db ff ff ff ff
+stringNone:
+db 00 00 00 00
+db ff ff ff ff
+
+"HS_e.exe"+BFA2C:
+jmp newmem
+returnhere:
+
+"HS_e.exe"+355848:
+jmp convert1newmem
+
+"HS_e.exe"+355862:
+jmp convert1newmem2
+nop
+
+"HS_e.exe"+3558B4:
+jmp convert1End_newmem
+nop
+
+"HS_e.exe"+BC260:
+jmp convert2newmem
+
+"HS_e.exe"+BC28B:
+jmp convert2newmem2
+nop 2
+
+"HS_e.exe"+BC2A3:
+jmp convert2End_newmem
+
+"HS_e.exe"+BD919:
+jmp drawTimerIfSPBT
+
+"HS_e.exe"+BE7E2:
+jmp drawTimerIfKLBT
+
+"HS_e.exe"+112036:
+jmp itemgen1_newmem
+
+"HS_e.exe"+111FA6:
+jmp itemgen2_newmem
+
+"HS_e.exe"+35315C:
+jmp collectCrystal_newmem
+nop
+
+"HS_e.exe"+3733A7:
+jmp displayTime_replayLastRecords_left
+
+"HS_e.exe"+373983:
+jmp displayTime_replayLastRecords_right
+
+"HS_e.exe"+C5F5E:
+jmp loadMultiStageReplay_Stage1Timer
+
+"HS_e.exe"+C5F78:
+jmp loadMultiStageReplay_Stage2Timer
+
+"HS_e.exe"+C5F93:
+jmp loadMultiStageReplay_Stage3Timer
+
+"HS_e.exe"+C5FAE:
+jmp loadMultiStageReplay_Stage4Timer
+
+"HS_e.exe"+C5FC9:
+jmp loadMultiStageReplay_Stage5Timer
+
+"HS_e.exe"+C5FE4:
+jmp loadMultiStageReplay_Stage6Timer
+
+"HS_e.exe"+C5FFF:
+jmp loadMultiStageReplay_Stage7Timer
+
+"HS_e.exe"+C601A:
+jmp loadMultiStageReplay_Stage8Timer
+
+"HS_e.exe"+C6035:
+jmp loadMultiStageReplay_Stage9Timer
+
+"HS_e.exe"+C6050:
+jmp loadMultiStageReplay_Stage10Timer
+
+"HS_e.exe"+C91D9:
+call resetExtendAndDeathCount
+
+"HS_e.exe"+CBB38:
+call resetExtendAndDeathCount
+
+"HS_e.exe"+34907F:
+call resetExtendAndDeathCount
+
+"HS_e.exe"+34AE34:
+call resetExtendAndDeathCount
+
+"HS_e.exe"+34BE38:
+jmp incrementExtendCount
+
+"HS_e.exe"+35327D:
+jmp incrementExtendCount_Revive
+nop
+
+"HS_e.exe"+354E42:
+call incrementDeathCount
+nop
+
+"HS_e.exe"+34C0EE:
+jmp incrementExtendCount_SPBT
+nop
+nop
+
+"HS_e.exe"+34C379:
+jmp incrementExtendCount_KLBT
+nop
+nop
+
+"HS_e.exe"+3716C9:
+jmp replayMenu_displayLoadout
+nop 6
+
+"HS_e.exe"+356461:
+call manageTime
+nop
+
+// Change the LAST RECORDS window for the TIME record display to fit in
+"HS_e.exe"+3716EC:
+db 38
+"HS_e.exe"+371741:
+db 24
+"HS_e.exe"+3732A9:
+db 30
+"HS_e.exe"+3732F1:
+db 40
+"HS_e.exe"+373339:
+db 50
+"HS_e.exe"+373381:
+db 60
+"HS_e.exe"+37355C:
+db 40
+"HS_e.exe"+37374D:
+db 50
+"HS_e.exe"+373946:
+db 60

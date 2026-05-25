@@ -1,0 +1,13 @@
+One-stage mode replay files (Segment Location/EX1/EX2):
+000000~00044B:	information displayed in LAST RECORDS and initial settings:
+  000000: TIMER (duration of replay)
+  000004: Segment number (-1: no Segment played)
+00044C~02A74B:	inputs and other stuff
+
+Multiple stage game mode replay files (FSO/Short Mission):
+000000~00044B:	information displayed in LAST RECORDS and initial settings:
+  
+00044C~1A8D43:	10 one-stage replays (same structure as Segment Location/EX1/EX2 replays):
+  (see "One-stage mode replay files (Segment Location/EX1/EX2)")
+1A8D44~1A8F09:	unknown
+1A8F0A~1A8FA9:	stage statistics (includes EXTENDED, DAMAGED, PROTECTED, MISSED, CONT MISS, as well as BT SPIRIT, BT KILL and continue flags.)

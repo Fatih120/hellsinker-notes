@@ -1,0 +1,2791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <Forms>
+    <UDF1 Class="TCEForm" Encoding="Ascii85">3uj/p2nldAU:MM2b.}cxWeIh0Gi32eO*Ftu((1{Dnwg$a!hC^)IV8V.nUj$/JTs+vgLw%9yK]beNoIZ=8)2M.kF!r$YEdyrfZa(XK,jCifPn!3</UDF1>
+  </Forms>
+  <CheatEntries>
+    <CheatEntry>
+      <ID>357</ID>
+      <Description>"Seems to be vital to some routines but I don't know its usage"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CBEEC</Address>
+      <Offsets>
+        <Offset>0</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>174</ID>
+      <Description>"Passive Spirit gain base value (differs between stages)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+8A9A20</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>176</ID>
+          <Description>"Segment 3B &amp; 3L: 5"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>177</ID>
+          <Description>"Segment 4: 3"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>179</ID>
+          <Description>"Segment 5: 3"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>180</ID>
+          <Description>"Segment 6: 5"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>181</ID>
+          <Description>"Segment 7: 6"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>182</ID>
+          <Description>"Segment 8: 7"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>175</ID>
+          <Description>"Segments 1B &amp; 1L: 0"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>178</ID>
+          <Description>"Segments 2B &amp; 2L: 1"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>183</ID>
+          <Description>"Shrine of Farewell: 0"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>185</ID>
+          <Description>"The Great Majority: 0"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>184</ID>
+          <Description>"The Way of All Flesh: 0"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>300</ID>
+      <Description>"XZ camera rotation angle (between 0 and 4095)"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+8A99C4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>299</ID>
+      <Description>"XY camera rotation angle (between 0 and 4095)"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+8A99C0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>298</ID>
+      <Description>"YZ camera rotation angle (between 0 and 4095)"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+8A99BC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Level selection"</Description>
+      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+8A9998</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>88</ID>
+          <Description>"Setting it to any other value while playing sets the character into post-death state."</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>87</ID>
+          <Description>"Setting it to any other value at the exact frame when the Segment starts crashes the game."</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>77</ID>
+          <Description>"9: Segment 1B"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>76</ID>
+          <Description>"8: Shrine of Farewell"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>75</ID>
+          <Description>"7: Segment 8"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>74</ID>
+          <Description>"6: Segment 7"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>73</ID>
+          <Description>"5: Segment 6"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>72</ID>
+          <Description>"4: Segment 5"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>70</ID>
+          <Description>"3: Segment 4"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>69</ID>
+          <Description>"2: Segment 3L"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>68</ID>
+          <Description>"1: Segment 2L"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>66</ID>
+          <Description>"15: The Great Majority"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>71</ID>
+          <Description>"14: The Way of All Flesh"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>81</ID>
+          <Description>"13: Segment 1L except that the four Quetzalcoatls clump together and shoot the same pattern than those from the Segment 4 sectors 34, 35, 36, etc..."</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>80</ID>
+          <Description>"12: Perpetual Calendar's FATE CONTROL phase"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>79</ID>
+          <Description>"11: Segment 3B"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>78</ID>
+          <Description>"10: Segment 2B"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>67</ID>
+          <Description>"0: Segment 1L"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>275</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+87F954</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>202</ID>
+      <Description>"First enemy bullet "</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+796414</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>280</ID>
+          <Description>"First enemy bullet alive flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+796414</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>278</ID>
+          <Description>"First enemy bullet color"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+796470</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>297</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+72C414+444</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>241</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682144+4D630</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>336</ID>
+      <Description>"?"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+683402</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>406</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682FFC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>253</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682C14</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>405</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682BFC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>250</ID>
+      <Description>"No description"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682BB8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>394</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+68272C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>213</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682728</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>334</ID>
+      <Description>"TOKEN maturity display"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682714</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>237</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682144+5A0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>58</ID>
+      <Description>"WAY OF LIFE (MAX:[value]+1)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+6821F8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>211</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682144+A4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>332</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6821DC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>331</ID>
+      <Description>"SURVIVABILITY"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6821D4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>373</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+682144+8C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>397</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6821C0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>320</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6821b8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>41</ID>
+      <Description>"STELLA value (0-5119999)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6821b4</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>37</ID>
+          <Description>"STELLA multiplier (0-9)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821B0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>35</ID>
+          <Description>"STELLA FLUCTUATION RANGE"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+3CBF04</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>390</ID>
+      <Description>"Number of enemies/subparts destroyed by non-player factors (UNCHAINs, destroying main part)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678500</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>389</ID>
+      <Description>"? (accessed by Scarlet Queen)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784FC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>31</ID>
+      <Description>"TOKEN*12000"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784F8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>152</ID>
+      <Description>"KILL"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784F4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>36</ID>
+      <Description>"SPIRIT"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784F0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>155</ID>
+      <Description>"Total TOKEN"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>154</ID>
+      <Description>"Total KILL"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784E8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>153</ID>
+      <Description>"Total SPIRIT"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784E4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>387</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784E0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>386</ID>
+      <Description>"Unknown, increases as you kill most enemies"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784DC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>385</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784D8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>384</ID>
+      <Description>"Number of Spirits given by BREAKTHROUGH and Immortality bonuses"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784D4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>383</ID>
+      <Description>"Number of Spirits given by end of stage tallies"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784D0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>333</ID>
+      <Description>"Number of earned Spirits from grazing"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784CC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>380</ID>
+      <Description>"Number of earned Spirits from damaging enemies"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784C8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>353</ID>
+      <Description>"Number of earned Spirits from passive Spirit gain"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784C4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>188</ID>
+      <Description>"Number of earned Spirits from enemy destruction (additional Spirit value that increases when damaging enemies at pointblank)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784C0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>381</ID>
+      <Description>"Number of earned Spirits from Unchains"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784BC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>388</ID>
+      <Description>"Number of earned Spirits from enemy destruction (base value)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>382</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784B4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>55</ID>
+      <Description>"Hide Terra gauge &amp; go to Shrine after current stage"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+6784AE</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>54</ID>
+      <Description>"Kill BREAKTHROUGH"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+6784AD</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>356</ID>
+      <Description>"Spirit BREAKTHROUGH"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>HS_e.exe+6784AC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>53</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+6784A8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>33</ID>
+      <Description>"TOKEN maturity (0-27936)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+67849c</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>56</ID>
+      <Description>"TERRA"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678498</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>57</ID>
+          <Description>"It is shown as decreasing from 240 to 0 but it actually increases from 0 to 240000."</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>150</ID>
+      <Description>"Number of ImMORTALITY bonuses (used for earning Spirits through ImMORTALITY)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678494</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>59</ID>
+      <Description>"NECESSARY*10000"</Description>
+      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+67848C</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>60</ID>
+          <Description>"1 life chip: 10000"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>85</ID>
+          <Description>"Luna crystal: +40 (1/250 of a life chip)"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>83</ID>
+          <Description>"+8 every frame (+1 life chip every 20.83 seconds)"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>84</ID>
+          <Description>"Death: +2 or +4 life chips"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>47</ID>
+      <Description>"0=player, 1=replay"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Binary</VariableType>
+      <BitStart>0</BitStart>
+      <BitLength>1</BitLength>
+      <ShowAsBinary>0</ShowAsBinary>
+      <Address>HS_e.exe+67846D</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>415</ID>
+      <Description>"Player movement direction (Y axis)"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678390</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>217</ID>
+      <Description>"Player movement direction (X axis)"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+67838C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>48</ID>
+      <Description>"Enemy spawn timer"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678368</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>34</ID>
+      <Description>"SECTOR"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+678364</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>146</ID>
+          <Description>"Also used in Segment 8 to determine the background:"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>147</ID>
+              <Description>"0: Stage background"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>148</ID>
+              <Description>"1: Boss phase 1"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>222</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+46CD28</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>304</ID>
+      <Description>"?"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+46CD28</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>283</ID>
+      <Description>"Current frame rate (frames shown every 100 seconds)"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+46CCF8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>344</ID>
+      <Description>"Identifier of last enemy hit by player bullets"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+46ACEC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>226</ID>
+      <Description>"Number of destroyed small Kaname stones (Segment 2)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878+4*4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>224</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878+4*3</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>225</ID>
+      <Description>"Number of destroyed UNCHAINable Unnamed 480 (Segment 2)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878+4*2</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>228</ID>
+      <Description>"Number of destroyed large Kaname stones (Segment 2)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878+4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>223</ID>
+      <Description>"Number of destroyed laser wheel arms (Segment 8)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>227</ID>
+      <Description>"Number of destroyed Waterleaper parts (Segment 2)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CD878</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>345</ID>
+      <Description>"Perpetual Calendar Fate Control timer"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7F0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>346</ID>
+      <Description>"Perpetual Calendar Fate Control phase number"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>350</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7D4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>349</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7D0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>348</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7CC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>347</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7C8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>229</ID>
+      <Description>"Shrine of Farewell selected door Y position"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7C4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>351</ID>
+      <Description>"Rusted Dragon wingless form final Clammbon phase timer 1"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7C0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>352</ID>
+      <Description>"Shrine of Farewell selected door X position"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7C0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>215</ID>
+      <Description>"Apostle of the Seed Dawn phase 2 state (0=active,1=inactive)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>272</ID>
+      <Description>"Rusted Dragon wingless form phase"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>273</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>216</ID>
+      <Description>"Apostle of the Seed Dusk phase 2 state (0=active,1=inactive)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7B4</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>198</ID>
+      <Description>"Unused enemy 0x11F last pink laser attack subphase"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7B0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>194</ID>
+      <Description>"Unused enemy 0x11F pink laser attack phase"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC7Ac</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>49</ID>
+      <Description>"Number of crystals (Shrine of Farewell)"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC798</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>220</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC78C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>46</ID>
+      <Description>"LIMIT"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC780</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>61</ID>
+      <Description>"DEFEAT (number of destroyed circles of Dunlins in Seg4 Sector 2)"</Description>
+      <ShowAsSigned>1</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC77C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>193</ID>
+      <Description>"Unused enemy 0x11F phase"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC77C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>192</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC778</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>364</ID>
+      <Description>"TIMER"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC738</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>29</ID>
+      <Description>"Menu/stage timer"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC734</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>43</ID>
+      <Description>"MENU BACKGROUND PHASE"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC2CC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>28</ID>
+      <Description>"?"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3CC2B8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>360</ID>
+      <Description>"First item type"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+3BA6F8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>359</ID>
+      <Description>"First item existence flag"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>7BA6E8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>296</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>HS_e.exe+391CF0</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>221</ID>
+      <Description>"No description"</Description>
+      <ShowAsHex>1</ShowAsHex>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>HS_e.exe+38C224</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>295</ID>
+      <Description>"No description"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Float</VariableType>
+      <Address>HS_e.exe+3576F8</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>190</ID>
+      <Description>"Seg1L boss spritesheet"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>String</VariableType>
+      <Length>14</Length>
+      <Unicode>0</Unicode>
+      <CodePage>0</CodePage>
+      <ZeroTerminate>1</ZeroTerminate>
+      <Address>4D2650</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>417</ID>
+      <Description>"Stack"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>197C30-5C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>50</ID>
+      <Description>"Character settings"</Description>
+      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>2</ID>
+          <Description>"Selected character"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+8a9a24</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>18</ID>
+          <Description>"Tobari-maru/Kagura loadout (0-3)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682190</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>20</ID>
+          <Description>"Bootleg Ghost"</Description>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+682164</Address>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>27</ID>
+              <Description>"NOTE: Prognosis, Avengerlay and Heatvision don't act as described by the Tuning DIPSW menu but instead act as a defenseless version of Aspirant."</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>26</ID>
+              <Description>"5: Heatvision (extra discharge stock)"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>25</ID>
+              <Description>"4: Avengerlay (explode on death)"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>24</ID>
+              <Description>"3: Prognosis (bullet trajectory estimation)"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>23</ID>
+              <Description>"2: Adept"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>22</ID>
+              <Description>"1: Solidstate"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>21</ID>
+              <Description>"0: Aspirant"</Description>
+              <GroupHeader>1</GroupHeader>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>82</ID>
+          <Description>"Limit of character selection (before unlocking Kagura)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+36363F</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"Limit of character selection (after unlocking Kagura)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+363633</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>44</ID>
+          <Description>"SPEED CONTROL"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682BDC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>45</ID>
+          <Description>"SPEED CONTROL (TUNING DIPSW)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+3CBEFC</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"Code chunks"</Description>
+      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>90</ID>
+          <Description>"Bytes/Words/DWords"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>15</ID>
+              <Description>"Prevent watching the boss replays on locked levels"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+3692b9</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>16</ID>
+                  <Description>"32998415=original code"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>17</ID>
+                  <Description>"32997903=watch boss replays where it's not permitted"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>12</ID>
+              <Description>"Forbids the player from watching a replay in a locked level"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+369502</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>13</ID>
+                  <Description>"32801807=original code"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>14</ID>
+                  <Description>"32801295=watch any replay"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>4</ID>
+              <Description>"Prevent the locked levels to be practiced in"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+369ab7</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>5</ID>
+                  <Description>"Set to 22643727 to bring back the original code chunk"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>6</ID>
+                  <Description>"Set to 22643215 to practice in any locked level"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>9</ID>
+              <Description>"Forbids the player from practicing the boss in locked levels"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+369748</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>10</ID>
+                  <Description>"Set to 30376975 to bring back the original code chunk"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>11</ID>
+                  <Description>"Set to 30376463 to practice any boss"</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>91</ID>
+          <Description>"Routines (right-click and disassemble to see what they do)"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>234</ID>
+              <Description>"Create item"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+111F8C</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>337</ID>
+              <Description>"Draw a circle?"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+85500</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>338</ID>
+                  <Description>"ECX=8-bit ARGB value"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>189</ID>
+              <Description>"Stage loading?"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>14</ByteLength>
+              <Address>HS_e.exe+369bc2</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>158</ID>
+              <Description>"Print text on screen (used for menus)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>5</ByteLength>
+              <Address>HS_e.exe+64800</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>156</ID>
+              <Description>"Print text on screen (used by Tuning DIPSW bottom text)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+BBEDC</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>159</ID>
+              <Description>"Print text (used for UI: Bootleg Ghost, Stella Fluctuation Range, speed control, etc...)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>0</ByteLength>
+              <Address>HS_e.exe+C3F00</Address>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>160</ID>
+                  <Description>"How2use"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>161</ID>
+                      <Description>"push float(X coordinate)"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>162</ID>
+                      <Description>"push 00"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>164</ID>
+                      <Description>"push float(Y coordinate)"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>163</ID>
+                      <Description>"push 00"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>165</ID>
+                      <Description>"push float(text width)"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>166</ID>
+                      <Description>"push float(text height)"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>167</ID>
+                      <Description>"mov eax,(start of string address)"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>168</ID>
+                      <Description>"The strings are made of doublewords."</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                    </CheatEntry>
+                    <CheatEntry>
+                      <ID>169</ID>
+                      <Description>"Structure of a string used for this routine:"</Description>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>170</ID>
+                          <Description>"4 bytes: length"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>171</ID>
+                          <Description>"(ceil(length/4)*4) bytes: string"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>172</ID>
+                          <Description>"4 final bytes: end of string with four 0xFF characters"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>201</ID>
+              <Description>"Play a sound effect?"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+10EF40</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>151</ID>
+              <Description>"Grant ImMORTALITY bonus"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+34BE6F</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>100</ID>
+              <Description>"Enemy spawning"</Description>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>103</ID>
+                  <Description>"HS_e.exe+10FE10 (pop 2)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+10FE10</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>108</ID>
+                      <Description>"Spawned enemies:"</Description>
+                      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>109</ID>
+                          <Description>"Chaff"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>114</ID>
+                          <Description>"Necro-Troop (EAX=0x00=0)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>120</ID>
+                          <Description>"Children (EAX=0x12=18)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>125</ID>
+                          <Description>"Ornithopter"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>121</ID>
+                          <Description>"Pigeon-Blood (EAX=0x14=20)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>126</ID>
+                          <Description>"Black Mono-Wing (EAX=0x15=21)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>129</ID>
+                          <Description>"Missile"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>134</ID>
+                          <Description>"Incablock"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>274</ID>
+                  <Description>"HS_e.exe+110154 (pop 5, mostly used for enemy parts)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+110154</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>284</ID>
+                  <Description>"HS_e.exe+11052C (pop 8)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+11052C</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>99</ID>
+                  <Description>"HS_e.exe+110934 (pop 3)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+110934</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>110</ID>
+                      <Description>"Spawned enemies:"</Description>
+                      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>128</ID>
+                          <Description>"Scarlet Queen"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>111</ID>
+                          <Description>"Mono-Wing"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>112</ID>
+                          <Description>"Necro-Troop"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>113</ID>
+                          <Description>"Transporter"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>115</ID>
+                          <Description>"Quetzalcoatl (EAX=0x01=1)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>127</ID>
+                          <Description>"Fake Rex-Cavalier &amp; fake 1000Knights"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>130</ID>
+                          <Description>"Rusted Dragon"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>139</ID>
+                          <Description>"Perpetual Calendar &amp; all bosses in Segment 5"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>141</ID>
+                          <Description>"Rex-Cavalier (Seg7)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>142</ID>
+                          <Description>"Unnamed 434"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>149</ID>
+                          <Description>"Dark Ibis"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>104</ID>
+                  <Description>"Mostly used for MASTERs and SLAVEs (pop 4)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+110C70</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>116</ID>
+                      <Description>"Spawned enemies:"</Description>
+                      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>123</ID>
+                          <Description>"Unnamed 435"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>124</ID>
+                          <Description>"Unnamed 454"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>122</ID>
+                          <Description>"Unnamed 501"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>117</ID>
+                          <Description>"Unnamed 510"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>133</ID>
+                          <Description>"MASTER &amp; SLAVE Clammbons"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>105</ID>
+                  <Description>"HS_e.exe+110FB0 (pop 4, only used for Segment 8 boss' first phase Unnamed 290)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+110FB0</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>92</ID>
+                  <Description>"HS_e.exe+1112F4 (pop 3)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+1112F4</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>118</ID>
+                      <Description>"Spawned enemies:"</Description>
+                      <Options moManualExpandCollapse="1" moAllowManualCollapseAndExpand="1"/>
+                      <Color>FF0000</Color>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>135</ID>
+                          <Description>"1000Knights (Seg6)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>119</ID>
+                          <Description>"Coffin"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>131</ID>
+                          <Description>"Clammbon"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>132</ID>
+                          <Description>"Unnamed 385 (fragments thrown by Rusted Dragon)"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>136</ID>
+                          <Description>"Unnamed 441 &amp; 442"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>137</ID>
+                          <Description>"Scary-Stupa"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>138</ID>
+                          <Description>"Zinc-Owl"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>140</ID>
+                          <Description>"Apostles of the Seed"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                        <CheatEntry>
+                          <ID>143</ID>
+                          <Description>"Hidden-Archive"</Description>
+                          <Color>FF0000</Color>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>106</ID>
+                  <Description>"HS_e.exe+111630 (pop 3)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+111630</Address>
+                  <CheatEntries>
+                    <CheatEntry>
+                      <ID>144</ID>
+                      <Description>"Spawned enemies:"</Description>
+                      <GroupHeader>1</GroupHeader>
+                      <CheatEntries>
+                        <CheatEntry>
+                          <ID>145</ID>
+                          <Description>"Unnamed 423 (bullet-blocking circles around Seg8 boss)"</Description>
+                          <GroupHeader>1</GroupHeader>
+                        </CheatEntry>
+                      </CheatEntries>
+                    </CheatEntry>
+                  </CheatEntries>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>107</ID>
+                  <Description>"HS_e.exe+111974 (pop 3)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>14</ByteLength>
+                  <Address>HS_e.exe+111974</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>102</ID>
+                  <Description>"All of these functions start by the same instructions but seem to slightly differ."</Description>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>279</ID>
+              <Description>"Estimate direction between two points (eg: aimed patterns)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+8A1D4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>195</ID>
+              <Description>"Enemy bullet generation"</Description>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>196</ID>
+                  <Description>"Create a bullet pop4"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+112098</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>277</ID>
+                  <Description>"Create a bullet pop5"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+112434</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>281</ID>
+              <Description>"Convert a bullet into a token item"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+355862</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>282</ID>
+              <Description>"Create an item (pop2, used for bullet cancels)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+11201C</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>89</ID>
+              <Description>"Determine number of enemies onscreen"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+BC7F4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>276</ID>
+              <Description>"Executor attacks"</Description>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>230</ID>
+                  <Description>"Create Executor bullet (Deadliar, Fossil Maiden, test)"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+111E30</Address>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>206</ID>
+                  <Description>"Create Executor bullet"</Description>
+                  <ShowAsHex>1</ShowAsHex>
+                  <ShowAsSigned>0</ShowAsSigned>
+                  <VariableType>Array of byte</VariableType>
+                  <ByteLength>10</ByteLength>
+                  <Address>HS_e.exe+111CD4</Address>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>246</ID>
+              <Description>"Do "Single Slug" Luna-charged attack when tapping MS twice (Fossil Maiden)"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+153C11</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>268</ID>
+              <Description>"Apply perspective transformation and offset to a coordinate"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+3A04</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>358</ID>
+              <Description>"Convert a number to a string"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Array of byte</VariableType>
+              <ByteLength>10</ByteLength>
+              <Address>HS_e.exe+9628</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>101</ID>
+              <Description>"About enemy spawning"</Description>
+              <Color>FF0000</Color>
+              <GroupHeader>1</GroupHeader>
+              <CheatEntries>
+                <CheatEntry>
+                  <ID>93</ID>
+                  <Description>"Pops three values from the stack and uses ECX, EDX and EAX registers."</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>98</ID>
+                  <Description>"The three stack values modify settings differing from an enemy to another."</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>95</ID>
+                  <Description>"EDX: X coordinate"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>94</ID>
+                  <Description>"ECX: Y coordinate"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>96</ID>
+                  <Description>"EAX: type of enemy"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+                <CheatEntry>
+                  <ID>97</ID>
+                  <Description>"Center of the screen: (x:0,y:0)"</Description>
+                  <Color>FF0000</Color>
+                  <GroupHeader>1</GroupHeader>
+                </CheatEntry>
+              </CheatEntries>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>65</ID>
+      <Description>"Fix bugs related to test character"</Description>
+      <Options moManualExpandCollapse="1" moActivateChildrenAsWell="1" moDeactivateChildrenAsWell="1" moAllowManualCollapseAndExpand="1"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>64</ID>
+          <Description>"Fix Dunlins not spawning bug in Seg4 Sector 2 (test character)"</Description>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>// Fix Dunlins not spawning bug in Segment 4 Sector 2 (for test character)
+[enable]
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+newmem:
+mov eax,[HS_e.exe+8A9A24]
+cmp eax,04
+jne exit
+mov eax,02
+
+originalcode:
+
+exit:
+jmp returnhere
+
+"HS_e.exe"+EF34F:
+jmp newmem
+returnhere:
+[disable]
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>254</ID>
+      <Description>"Inputs"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>263</ID>
+          <Description>"Buttons (hold)"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>255</ID>
+              <Description>"Main shot"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+EF</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>256</ID>
+              <Description>"Subweapon"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>375</ID>
+              <Description>"Subweapon (previous frame)"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+E0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>257</ID>
+              <Description>"Discharge"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F1</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>258</ID>
+              <Description>"Pause"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F2</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>259</ID>
+              <Description>"Quit"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F3</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>260</ID>
+              <Description>"Restart"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F4</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>261</ID>
+              <Description>"Speed control"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+F5</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>420</ID>
+          <Description>"Buttons (previous frame)"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>421</ID>
+              <Description>"Main shot"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682223</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>422</ID>
+              <Description>"Subweapon"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682224</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>423</ID>
+              <Description>"Subweapon (previous frame)"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682214</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>424</ID>
+              <Description>"Discharge"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682225</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>425</ID>
+              <Description>"Pause"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682226</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>426</ID>
+              <Description>"Quit"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682227</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>427</ID>
+              <Description>"Restart"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682228</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>428</ID>
+              <Description>"Speed control"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682229</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>264</ID>
+          <Description>"Arrow keys"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>266</ID>
+              <Description>"Up"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+DB</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>265</ID>
+              <Description>"Right"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+DC</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>267</ID>
+              <Description>"Down"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+DD</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>262</ID>
+              <Description>"Left"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>Byte</VariableType>
+              <Address>HS_e.exe+682144+DE</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>86</ID>
+      <Description>"Mods (to be added)"</Description>
+      <GroupHeader>1</GroupHeader>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>285</ID>
+      <Description>"First enemy in array"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>288</ID>
+          <Description>"Angle (3F000000=0°,3F800000=180°)"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C87C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>308</ID>
+          <Description>"0x12E snake Z coord lerp value"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+180</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>309</ID>
+          <Description>"0x12E snake Y coord lerp value"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+17C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>307</ID>
+          <Description>"0x12E snake X coord lerp value"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+DC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>294</ID>
+          <Description>"0x12E snake Z coord"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>290</ID>
+          <Description>"0x12E snake Y coord"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4D4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>289</ID>
+          <Description>"0x12E snake X coord"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>219</ID>
+          <Description>"No description"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>287</ID>
+          <Description>"Y coordinate"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>286</ID>
+          <Description>"X coordinate"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4C0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>402</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4BC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>291</ID>
+          <Description>"Identifier"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4B8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>302</ID>
+          <Description>"Timer"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4B4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>303</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+98</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>404</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C4A0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>403</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C49C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>354</ID>
+          <Description>"HP"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C498</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>313</ID>
+          <Description>"First hitbox size"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C414+70</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>355</ID>
+          <Description>"Additional Spirit value"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C478</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>305</ID>
+          <Description>"0x12E snake X/Z rotation"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C448</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>301</ID>
+          <Description>"0x12E snake "</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+72C430</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>310</ID>
+          <Description>"SEALable flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+72C414+16</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>311</ID>
+          <Description>"Collision with player flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+72C414+0C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>312</ID>
+          <Description>"Collision with player bullets flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+72C414+06</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>292</ID>
+          <Description>"Existence flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+72C416</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>306</ID>
+      <Description>"Group 126"</Description>
+      <GroupHeader>1</GroupHeader>
+      <Address/>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>418</ID>
+      <Description>"EXECUTOR-related (player character)"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>378</ID>
+          <Description>"Player first bullet"</Description>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>377</ID>
+              <Description>"Damage radius"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+682144+12E0</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>379</ID>
+              <Description>"Damage inflicted when hitting an enemy"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>HS_e.exe+682144+12EC</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>341</ID>
+              <Description>"Type"</Description>
+              <ShowAsHex>1</ShowAsHex>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>A83400+40</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>368</ID>
+              <Description>"X coordinate"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>A82144+1308</Address>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>369</ID>
+              <Description>"Y coordinate"</Description>
+              <ShowAsSigned>0</ShowAsSigned>
+              <VariableType>4 Bytes</VariableType>
+              <Address>A82144+130C</Address>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>231</ID>
+          <Description>"Kuguz-maru bullet type"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+11F947</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>232</ID>
+          <Description>"Deadliar4 subweapon bullet type"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+11F967</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>244</ID>
+          <Description>"Set Saraba-maru type to ... each frame"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+1538A9</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>242</ID>
+          <Description>"Fossil Maiden bomb bullet type"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+154B0A</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>339</ID>
+          <Description>"Zoom factor (Fossil Maiden's invincibility bomb circle display)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>HS_e.exe+171784</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>340</ID>
+          <Description>"Y offset (Fossil Maiden's invincibility bomb circle display)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>HS_e.exe+171788</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>342</ID>
+          <Description>"? (Fossil Maiden's invincibility bomb circle display)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Float</VariableType>
+          <Address>HS_e.exe+171790</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>322</ID>
+          <Description>"Death-related flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+682145</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>366</ID>
+          <Description>"Main shot fast tapping flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+682148</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>321</ID>
+          <Description>"0=EXECUTOR is invincible, 1=vulnerable to bullets"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+68214A</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>362</ID>
+          <Description>"Subweapon level 2 ready flag"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+68214C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>363</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68215C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>398</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682160</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>400</ID>
+          <Description>"SOLIDSTATE REST"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682168</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>401</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68216C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>319</ID>
+          <Description>"EXECUTOR's hitbox radius"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682170</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>361</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682174</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>330</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682178</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>329</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68217C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>328</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682180</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>327</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682184</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>326</ID>
+          <Description>"?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682188</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>314</ID>
+          <Description>"Subweapon gauge level 1 (blue)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68218C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>318</ID>
+          <Description>"Kagura's loadout"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682190</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>204</ID>
+          <Description>"SHOT REFILLING (Kagura4)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682194</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>315</ID>
+          <Description>"EXECUTOR's graze field size"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682198</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>323</ID>
+          <Description>"?"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68219C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>42</ID>
+          <Description>"SOL level (0-4)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821A0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>317</ID>
+          <Description>"LUNA level"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821A4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>316</ID>
+          <Description>"SOL"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>200</ID>
+          <Description>"LUNA"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821AC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>218</ID>
+          <Description>"Consecutive shot iterations?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821C4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>365</ID>
+          <Description>"Character shooting timer"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821C8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>199</ID>
+          <Description>"Main shot button hold time"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+88</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>51</ID>
+          <Description>"Lives-1"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6821F4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>205</ID>
+          <Description>"Option state (Deadliar, Kagura2) (0=INDEPEND,1=MOUNT)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+682219</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>245</ID>
+          <Description>"Time since main shot button tapped (Fossil Maiden) (0~300)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682604</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>208</ID>
+          <Description>"Subweapon level 2 gauge"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+5A4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>207</ID>
+          <Description>"Subweapon level 2 max value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+5A8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>32</ID>
+          <Description>"LIFE SCALE"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68270C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>335</ID>
+          <Description>"EXPAND"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682710</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>367</ID>
+          <Description>"used by Minogame"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+5D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>371</ID>
+          <Description>"Kagura's 0x42 unused option X lerp value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+5D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>412</ID>
+          <Description>"0.95 Kagura dash Y velocity"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+5E0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>393</ID>
+          <Description>"Saraba-maru shooting distance from Fossil Maiden"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682730</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>392</ID>
+          <Description>"Saraba-maru shooting position direction lerp value"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682734</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>391</ID>
+          <Description>"Kagura3 shot range (max=22912)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682740</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>212</ID>
+          <Description>"Kagura3 shot range (max=22913) lerp value"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682744</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>370</ID>
+          <Description>"Used by Kagura's 0x42 unused options"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+6D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>372</ID>
+          <Description>"Kagura's 0x42 unused option Y lerp value"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+6D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>395</ID>
+          <Description>"Saraba-maru shooting distance from Fossil Maiden lerp value"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682830</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>374</ID>
+          <Description>"Kagura1 hold subweapon display time"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682834</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>247</ID>
+          <Description>""Single Slug" destination Y (Fossil Maiden)"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682838</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>248</ID>
+          <Description>"Unknown (Fossil Maiden)"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+68283C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>396</ID>
+          <Description>"Unknown (Fossil Maiden)"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682840</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>407</ID>
+          <Description>"When changed, Kagura uses a charged attack"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+7D8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>409</ID>
+          <Description>"0.95 Kagura dash X velocity"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+7E4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>411</ID>
+          <Description>"0.95 Kagura dash time"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+7E8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>413</ID>
+          <Description>"0.95 Kagura"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+7EC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>243</ID>
+          <Description>"Executor timer"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682BA4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>343</ID>
+          <Description>"Currently used character?"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682BA8</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>238</ID>
+          <Description>"Player invincibility frames"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682BAC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>210</ID>
+          <Description>"Player X coordinate"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+A6C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>209</ID>
+          <Description>"Player Y coordinate"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+A70</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>414</ID>
+          <Description>"Current player speed multiplier (10000=100%)"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+AA0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>416</ID>
+          <Description>"Current player speed"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+AA4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>233</ID>
+          <Description>"Increases during Fossil Maiden's invincibility bomb effect, affects radius of green circle"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>A83400+3C</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>249</ID>
+          <Description>"Attack Y position (Fossil Maiden)"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682838+C18</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>239</ID>
+          <Description>"Saraba-maru existence flag"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>Byte</VariableType>
+          <Address>HS_e.exe+682144+4D5F4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>376</ID>
+          <Description>"Saraba-maru bullet type"</Description>
+          <ShowAsHex>1</ShowAsHex>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+682144+4D634</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>251</ID>
+          <Description>"Saraba-maru X position"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6CF784</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>252</ID>
+          <Description>"Saraba-maru Y position"</Description>
+          <ShowAsSigned>1</ShowAsSigned>
+          <VariableType>4 Bytes</VariableType>
+          <Address>HS_e.exe+6CF788</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>435</ID>
+      <Description>"[EBP+...] addresses"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>432</ID>
+          <Description>"Character selection (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019EEF4</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>433</ID>
+          <Description>"Score type (SPIRIT/TOKEN/KILL/ALL-TIME/ALL-LOSPILITS) (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <ShowAsSigned>0</ShowAsSigned>
+          <VariableType>2 Bytes</VariableType>
+          <Address>0019EEF0</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>434</ID>
+          <Description>"FULL SEQUENCE ORDER/SHORT MISSION/JOIN TO THE GREAT MAJORITY (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019EEE8</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>-- Allow to play in locked levels, use the test character and Kuguz-maru
+writeInteger("HS_e.exe+369748",30376463)
+writeInteger("HS_e.exe+369ab7",22643215)
+writeInteger("HS_e.exe+369502",32801295)
+writeInteger("HS_e.exe+3692b9",32997903)
+writeInteger("HS_e.exe+363633",4)
+writeInteger("HS_e.exe+36363f",4)
+writeByte("HS_e.exe+368db2",3)
+writeByte("HS_e.exe+368e4c",4)
+writeByte("HS_e.exe+3648f0",3)
+writeByte("HS_e.exe+364980",4)
+messageDialog("This script has been executed.\nYou can now play as the unused characters.")
+</LuaScript>
+</CheatTable>

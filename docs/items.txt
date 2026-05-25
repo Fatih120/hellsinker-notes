@@ -1,0 +1,58 @@
+HS1.009 item technical documentation
+
+Array start address at 7BA6E8 (pointer at 78BE8C)
+Update routines locations are stored at CA9514
+Routines to generate items:
+- 511F8C:
+	(TBA)
+- 51201C:
+	Pops 2 values.
+	ECX=Y coordinate
+	EDX=X coordinate
+	EAX=type of item
+
+Each item holds 0x8C/140 bytes of data.
+The item array holds up to 512 items.
+
+[item+04]: collection radius
+[item+0C]: timer
+[item+10]: type
+[item+14]: X position
+[item+18]: Y position
+[item+40]: Luna crystal maturity level (TOKEN multiplier for Luna crystals)
+
+Types:
+0x00	SOL piece
+0x01	LUNA crystal
+0x02	STELLA UP item
+0x03	STELLA DOWN item
+0x04	Ingot
+0x05	Extend item
+0x06	LUNA chaff
+0x07	TERRA token
+0x08	Shrine of Farewell blue crystal
+0x09	Shrine of Farewell red crystal
+0x0A	Bullet cancel LUNA crystal
+0x0B	Comet relic (spherical item generated upon death)
+0x0C	ReVIVE item
+0x0D	LUNA droplet (generated when destroying an enemy with bullets over it)
+
+Routine locations:
+
+0x00	5194C4
+0x01	519F58
+0x02	518FE0
+0x03	519250
+0x04	51AE74
+0x05	51B0AC
+0x06	51ACCC
+0x07	519660
+0x08	519974
+0x09	519C64
+0x0A	51A900
+0x0B	51A6AC
+0x0C	51B48C
+0x0D	51A53C
+
+Spirits obtained per Ingot collected:
+	Outside of Shrine of Farewell: 800+150*(STELLA-1)*?

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="42">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"Character selection"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+96D59C</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>1</ID>
+      <Description>"Deadliar/Kagura loadout"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+719418</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>2</ID>
+      <Description>"Character selection limit (before unlocking Kagura)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>hs_dx9build.exe+3e285e</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>9</ID>
+      <Description>"Character selection limit (after unlocking Kagura)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>hs_dx9build.exe+3E2852</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>3</ID>
+      <Description>"BOOTLEG GHOST"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+7193EC</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>4</ID>
+      <Description>"Stage selection"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+96D510</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>5</ID>
+      <Description>"WAY OF LIFE"</Description>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+719488</Address>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>6</ID>
+          <Description>"DRASTIC=4"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>7</ID>
+          <Description>"MODERATELY=5"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>8</ID>
+          <Description>"PRUDENTLY=6"</Description>
+          <GroupHeader>1</GroupHeader>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>10</ID>
+      <Description>"Character selection limit (Kagura unlocked, Practice Chamber)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+3DD1CF</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>11</ID>
+      <Description>"Character selection limit (Practice Chamber)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>hs_dx9build.exe+3DD1DB</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>15</ID>
+      <Description>"[EBP+...] addresses"</Description>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>12</ID>
+          <Description>"Score category (SPIRIT/KILL/TOKEN) (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019EBFC</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>13</ID>
+          <Description>"Character (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019EC00</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>14</ID>
+          <Description>"Play category (FULL SEQUENCE ORDER/SHORT MISSION/JOIN TO THE FULL MAJORITY) (ARCHIVEMENT OF EXECUTORS)"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>0019EBF4</Address>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+  <LuaScript>writeByte("hs_dx9build.exe+3E9639",0x82)
+writeByte("hs_dx9build.exe+3E8FA8",0x82)
+writeByte("hs_dx9build.exe+3E8CE0",0x82)
+writeByte("hs_dx9build.exe+3E926D",0x82)
+writeByte("hs_dx9build.exe+3E285E",4)
+writeByte("hs_dx9build.exe+3E2852",4)
+writeByte("hs_dx9build.exe+3DD1CF",4)
+writeByte("hs_dx9build.exe+3DD1DB",4)
+</LuaScript>
+</CheatTable>

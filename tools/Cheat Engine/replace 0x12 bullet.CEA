@@ -1,0 +1,19 @@
+alloc(newmem,2048)
+label(returnhere)
+label(originalcode)
+label(exit)
+
+newmem:
+mov eax,00000070
+
+originalcode:
+call HS_e.exe+112434
+
+exit:
+jmp returnhere
+
+"HS_e.exe"+1A15B9:
+jmp newmem
+returnhere:
+
+

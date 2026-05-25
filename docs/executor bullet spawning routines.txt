@@ -1,0 +1,284 @@
+HS_e.exe+511CD4:
+
+[Assembly code]
+HS_e.exe+111CD4 - push ebp
+HS_e.exe+111CD5 - mov ebp,esp
+HS_e.exe+111CD7 - push ecx
+HS_e.exe+111CD8 - push ebx
+HS_e.exe+111CD9 - push esi
+HS_e.exe+111CDA - push edi
+HS_e.exe+111CDB - mov [ebp-04],ecx
+HS_e.exe+111CDE - mov esi,eax
+HS_e.exe+111CE0 - mov edi,00000100
+HS_e.exe+111CE5 - mov ebx,HS_e.exe+683400
+HS_e.exe+111CEA - cmp byte ptr [ebx],00
+HS_e.exe+111CED - jne HS_e.exe+111E0B
+HS_e.exe+111CF3 - fld tword ptr [HS_e.exe+111E20]
+HS_e.exe+111CF9 - fcomp dword ptr [ebp+08]
+HS_e.exe+111CFC - wait:fstsw ax 
+HS_e.exe+111CFF - sahf 
+HS_e.exe+111D00 - jae HS_e.exe+111D0F
+HS_e.exe+111D02 - fld tword ptr [HS_e.exe+111E20]
+HS_e.exe+111D08 - fsubr dword ptr [ebp+08]
+HS_e.exe+111D0B - fstp dword ptr [ebp+08]
+HS_e.exe+111D0E - wait 
+HS_e.exe+111D0F - fld dword ptr [ebp+08]
+HS_e.exe+111D12 - fcomp dword ptr [HS_e.exe+111E2C]
+HS_e.exe+111D18 - wait:fstsw ax 
+HS_e.exe+111D1B - sahf 
+HS_e.exe+111D1C - jae HS_e.exe+111D2B
+HS_e.exe+111D1E - fld tword ptr [HS_e.exe+111E20]
+HS_e.exe+111D24 - fadd dword ptr [ebp+08]
+HS_e.exe+111D27 - fstp dword ptr [ebp+08]
+HS_e.exe+111D2A - wait 
+HS_e.exe+111D2B - mov eax,ebx
+HS_e.exe+111D2D - xor ecx,ecx
+HS_e.exe+111D2F - mov [eax+48],ecx
+HS_e.exe+111D32 - xor ecx,ecx
+HS_e.exe+111D34 - mov [eax+44],ecx
+HS_e.exe+111D37 - mov byte ptr [eax],01
+HS_e.exe+111D3A - mov byte ptr [eax+01],00
+HS_e.exe+111D3E - mov byte ptr [eax+08],00
+HS_e.exe+111D42 - mov byte ptr [eax+05],00
+HS_e.exe+111D46 - mov byte ptr [eax+06],00
+HS_e.exe+111D4A - mov byte ptr [eax+09],00
+HS_e.exe+111D4E - mov byte ptr [eax+02],00
+HS_e.exe+111D52 - mov byte ptr [eax+0A],00
+HS_e.exe+111D56 - mov byte ptr [eax+0B],00
+HS_e.exe+111D5A - mov byte ptr [eax+04],00
+HS_e.exe+111D5E - mov byte ptr [eax+03],00
+HS_e.exe+111D62 - mov byte ptr [eax+0C],00
+HS_e.exe+111D66 - mov [eax+24],000000C8
+HS_e.exe+111D6D - xor ecx,ecx
+HS_e.exe+111D6F - mov [eax+28],ecx
+HS_e.exe+111D72 - xor ecx,ecx
+HS_e.exe+111D74 - mov [eax+2C],ecx
+HS_e.exe+111D77 - xor ecx,ecx
+HS_e.exe+111D79 - mov [eax+30],ecx
+HS_e.exe+111D7C - mov [eax+18],0000000A
+HS_e.exe+111D83 - xor ecx,ecx
+HS_e.exe+111D85 - mov [eax+34],ecx
+HS_e.exe+111D88 - xor ecx,ecx
+HS_e.exe+111D8A - mov [eax+38],ecx
+HS_e.exe+111D8D - xor ecx,ecx
+HS_e.exe+111D8F - mov [eax+3C],ecx
+HS_e.exe+111D92 - mov [eax+40],esi
+HS_e.exe+111D95 - mov [eax+4C],edx
+HS_e.exe+111D98 - mov edx,[ebp-04]
+HS_e.exe+111D9B - mov [eax+50],edx
+HS_e.exe+111D9E - mov edx,[ebp+0C]
+HS_e.exe+111DA1 - mov [eax+5C],edx
+HS_e.exe+111DA4 - xor edx,edx
+HS_e.exe+111DA6 - mov [eax+000004B0],edx
+HS_e.exe+111DAC - xor edx,edx
+HS_e.exe+111DAE - mov [eax+0000049C],edx
+HS_e.exe+111DB4 - xor edx,edx
+HS_e.exe+111DB6 - mov [eax+000004A0],edx
+HS_e.exe+111DBC - xor edx,edx
+HS_e.exe+111DBE - mov [eax+000004A4],edx
+HS_e.exe+111DC4 - xor edx,edx
+HS_e.exe+111DC6 - mov [eax+0000048C],edx
+HS_e.exe+111DCC - xor edx,edx
+HS_e.exe+111DCE - mov [eax+00000490],edx
+HS_e.exe+111DD4 - mov [eax+00000494],FFFFFFFF
+HS_e.exe+111DDE - mov [eax+00000498],FFFFFFFF
+HS_e.exe+111DE8 - mov [eax+000004BC],3F800000
+HS_e.exe+111DF2 - mov edx,[ebp+08]
+HS_e.exe+111DF5 - mov [eax+000004C0],edx
+HS_e.exe+111DFB - mov byte ptr [eax+0D],00
+HS_e.exe+111DFF - mov [eax+000004C4],00002710
+HS_e.exe+111E09 - jmp HS_e.exe+111E18
+HS_e.exe+111E0B - add ebx,000004C8
+HS_e.exe+111E11 - dec edi
+HS_e.exe+111E12 - jne HS_e.exe+111CEA
+HS_e.exe+111E18 - pop edi
+HS_e.exe+111E19 - pop esi
+HS_e.exe+111E1A - pop ebx
+HS_e.exe+111E1B - pop ecx
+HS_e.exe+111E1C - pop ebp
+HS_e.exe+111E1D - ret 0008
+
+[Attributes defined to new bullet]
+(bullet):     $01           → existence flag
+(bullet+01):  $00           →  flag
+(bullet+02):  $00           →  flag
+(bullet+03):  $00           →  flag
+(bullet+04):  $00           →  flag
+(bullet+05):  $00           →  flag
+(bullet+06):  $00           →  flag
+(bullet+08):  $00           →  flag
+(bullet+09):  $00           →  flag
+(bullet+0A):  $00           →  flag
+(bullet+0B):  $00           →  flag
+(bullet+0C):  $00           →  flag
+(bullet+0D):  $00           →  flag
+(bullet+18):  $0000000A     → ?
+(bullet+24):  $000000C8     → hit radius
+(bullet+28):  $00000000     → damage inflicted when hitting an enemy
+(bullet+2C):  $00000000     → ?
+(bullet+30):  $00000000     → ?
+(bullet+34):  $00000000     → ?
+(bullet+38):  $00000000     → ?
+(bullet+3C):  $00000000     → timer
+(bullet+40):  bullet type (defined by setting EAX to desired value before calling routine)
+(bullet+44):  $00
+(bullet+48):  $00
+(bullet+4C):  bullet X position (defined by setting EDX to desired value before calling routine)
+(bullet+50):  bullet Y position (defined by setting ECX to desired value before calling routine)
+(bullet+48C): $00000000
+(bullet+490): $00000000
+(bullet+494): $FFFFFFFF
+(bullet+498): $FFFFFFFF
+(bullet+49C): $00000000
+(bullet+4A0): $00000000
+(bullet+4A4): $00000000
+(bullet+4B0): $00000000
+(bullet+4BC): 1.00 (float)
+(bullet+4C0): ? (float)
+(bullet+4C4): $00002710
+
+[C code equivalent]
+(TBA)
+
+HS_e.exe+511E30:
+[Assembly code]
+HS_e.exe+111E30 - push ebp
+HS_e.exe+111E31 - mov ebp,esp
+HS_e.exe+111E33 - push ecx
+HS_e.exe+111E34 - push ebx
+HS_e.exe+111E35 - push esi
+HS_e.exe+111E36 - push edi
+HS_e.exe+111E37 - mov [ebp-04],ecx
+HS_e.exe+111E3A - mov esi,eax
+HS_e.exe+111E3C - mov edi,00000100
+HS_e.exe+111E41 - mov ebx,HS_e.exe+683400
+HS_e.exe+111E46 - cmp byte ptr [ebx],00
+HS_e.exe+111E49 - jne HS_e.exe+111F65
+HS_e.exe+111E4F - fld tword ptr [HS_e.exe+111F7C]
+HS_e.exe+111E55 - fcomp dword ptr [ebp+08]
+HS_e.exe+111E58 - wait:fstsw ax 
+HS_e.exe+111E5B - sahf 
+HS_e.exe+111E5C - jae HS_e.exe+111E6B
+HS_e.exe+111E5E - fld tword ptr [HS_e.exe+111F7C]
+HS_e.exe+111E64 - fsubr dword ptr [ebp+08]
+HS_e.exe+111E67 - fstp dword ptr [ebp+08]
+HS_e.exe+111E6A - wait 
+HS_e.exe+111E6B - fld dword ptr [ebp+08]
+HS_e.exe+111E6E - fcomp dword ptr [HS_e.exe+111F88]
+HS_e.exe+111E74 - wait:fstsw ax 
+HS_e.exe+111E77 - sahf 
+HS_e.exe+111E78 - jae HS_e.exe+111E87
+HS_e.exe+111E7A - fld tword ptr [HS_e.exe+111F7C]
+HS_e.exe+111E80 - fadd dword ptr [ebp+08]
+HS_e.exe+111E83 - fstp dword ptr [ebp+08]
+HS_e.exe+111E86 - wait 
+HS_e.exe+111E87 - mov eax,ebx
+HS_e.exe+111E89 - xor ecx,ecx
+HS_e.exe+111E8B - mov [eax+48],ecx
+HS_e.exe+111E8E - xor ecx,ecx
+HS_e.exe+111E90 - mov [eax+44],ecx
+HS_e.exe+111E93 - mov byte ptr [eax+06],00
+HS_e.exe+111E97 - mov byte ptr [eax],01
+HS_e.exe+111E9A - mov byte ptr [eax+01],00
+HS_e.exe+111E9E - mov byte ptr [eax+08],00
+HS_e.exe+111EA2 - mov byte ptr [eax+05],00
+HS_e.exe+111EA6 - mov byte ptr [eax+09],00
+HS_e.exe+111EAA - mov byte ptr [eax+02],00
+HS_e.exe+111EAE - mov byte ptr [eax+0A],00
+HS_e.exe+111EB2 - mov byte ptr [eax+0B],00
+HS_e.exe+111EB6 - mov byte ptr [eax+04],00
+HS_e.exe+111EBA - mov byte ptr [eax+03],00
+HS_e.exe+111EBE - mov byte ptr [eax+0C],00
+HS_e.exe+111EC2 - mov [eax+24],000000C8
+HS_e.exe+111EC9 - xor ecx,ecx
+HS_e.exe+111ECB - mov [eax+28],ecx
+HS_e.exe+111ECE - xor ecx,ecx
+HS_e.exe+111ED0 - mov [eax+2C],ecx
+HS_e.exe+111ED3 - xor ecx,ecx
+HS_e.exe+111ED5 - mov [eax+30],ecx
+HS_e.exe+111ED8 - mov ecx,[ebp+0C]
+HS_e.exe+111EDB - mov [eax+18],ecx
+HS_e.exe+111EDE - xor ecx,ecx
+HS_e.exe+111EE0 - mov [eax+34],ecx
+HS_e.exe+111EE3 - xor ecx,ecx
+HS_e.exe+111EE5 - mov [eax+38],ecx
+HS_e.exe+111EE8 - xor ecx,ecx
+HS_e.exe+111EEA - mov [eax+3C],ecx
+HS_e.exe+111EED - mov [eax+40],esi
+HS_e.exe+111EF0 - mov [eax+4C],edx
+HS_e.exe+111EF3 - mov edx,[ebp-04]
+HS_e.exe+111EF6 - mov [eax+50],edx
+HS_e.exe+111EF9 - xor edx,edx
+HS_e.exe+111EFB - mov [eax+5C],edx
+HS_e.exe+111EFE - xor edx,edx
+HS_e.exe+111F00 - mov [eax+000004B0],edx
+HS_e.exe+111F06 - xor edx,edx
+HS_e.exe+111F08 - mov [eax+0000049C],edx
+HS_e.exe+111F0E - xor edx,edx
+HS_e.exe+111F10 - mov [eax+000004A0],edx
+HS_e.exe+111F16 - xor edx,edx
+HS_e.exe+111F18 - mov [eax+000004A4],edx
+HS_e.exe+111F1E - xor edx,edx
+HS_e.exe+111F20 - mov [eax+0000048C],edx
+HS_e.exe+111F26 - xor edx,edx
+HS_e.exe+111F28 - mov [eax+00000490],edx
+HS_e.exe+111F2E - mov [eax+00000494],FFFFFFFF
+HS_e.exe+111F38 - mov [eax+00000498],FFFFFFFF
+HS_e.exe+111F42 - mov [eax+000004BC],3F800000
+HS_e.exe+111F4C - mov edx,[ebp+08]
+HS_e.exe+111F4F - mov [eax+000004C0],edx
+HS_e.exe+111F55 - mov byte ptr [eax+0D],00
+HS_e.exe+111F59 - mov [eax+000004C4],00002710
+HS_e.exe+111F63 - jmp HS_e.exe+111F72
+HS_e.exe+111F65 - add ebx,000004C8
+HS_e.exe+111F6B - dec edi
+HS_e.exe+111F6C - jne HS_e.exe+111E46
+HS_e.exe+111F72 - pop edi
+HS_e.exe+111F73 - pop esi
+HS_e.exe+111F74 - pop ebx
+HS_e.exe+111F75 - pop ecx
+HS_e.exe+111F76 - pop ebp
+HS_e.exe+111F77 - ret 0008
+
+[Attributes defined to new bullet]
+
+[Attributes defined to new bullet]
+(bullet):     $01           → existence flag
+(bullet+01):  $00           →  flag
+(bullet+02):  $00           →  flag
+(bullet+03):  $00           →  flag
+(bullet+04):  $00           →  flag
+(bullet+05):  $00           →  flag
+(bullet+06):  $00           →  flag
+(bullet+08):  $00           →  flag
+(bullet+09):  $00           →  flag
+(bullet+0A):  $00           →  flag
+(bullet+0B):  $00           →  flag
+(bullet+0C):  $00           →  flag
+(bullet+0D):  $00           →  flag
+(bullet+18):  ?
+(bullet+24):  $000000C8     → hit radius
+(bullet+28):  $00000000     → damage inflicted when hitting an enemy
+(bullet+2C):  $00000000     → ?
+(bullet+30):  $00000000     → ?
+(bullet+34):  $00000000     → ?
+(bullet+38):  $00000000     → ?
+(bullet+3C):  $00000000     → timer
+(bullet+40):  bullet type (defined by setting EAX to desired value before calling routine)
+(bullet+4C):  bullet X position (defined by setting EDX to desired value before calling routine)
+(bullet+50):  bullet Y position (defined by setting ECX to desired value before calling routine)
+(bullet+5C):  $00000000     → ?
+(bullet+48C): $00000000     
+(bullet+490): $00000000     
+(bullet+494): $FFFFFFFF     
+(bullet+498): $FFFFFFFF     
+(bullet+49C): $00000000     
+(bullet+4A0): $00000000     
+(bullet+4A4): $00000000     
+(bullet+4B0): $00000000     
+(bullet+4BC): 1.00 (float)
+(bullet+4C0): ? (float)
+(bullet+4C4): $00002710
+
+[C code equivalent]
+(TBA)

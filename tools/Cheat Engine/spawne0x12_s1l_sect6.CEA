@@ -1,0 +1,38 @@
+alloc(newmem,2048)
+label(spawnloop)
+label(spawnend)
+label(spawn)
+label(returnhere)
+label(exit)
+
+newmem:
+cmp eax,06
+ja HS_e.exe+D18CD
+jne exit
+spawnloop:
+mov eax,[HS_e.exe+678368]
+and eax,0000007f
+cmp eax,00
+jne spawnend
+call spawn
+
+spawnend:
+jmp HS_e.exe+D18CD
+
+spawn:
+push 00000000
+push 3F000000
+mov ecx,ffffa000
+mov edx,00000000
+mov eax,00000012
+call HS_e.exe+10FE10
+ret
+
+exit:
+jmp returnhere
+
+"HS_e.exe"+CE98D:
+jmp newmem
+nop 4
+returnhere:
+

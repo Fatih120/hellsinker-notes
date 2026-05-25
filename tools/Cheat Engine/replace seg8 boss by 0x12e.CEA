@@ -1,0 +1,42 @@
+alloc(newmem,2048)
+label(returnhere)
+label(rotation)
+label(exit)
+
+newmem: //this is allocated memory, you have read,write,execute access
+//place your code here
+mov ecx,00000000
+mov edx,00000000
+mov eax,00000800
+mov [00CA99BC],eax // Setting the camera angles so that 0x12E is correctly placed on the screen
+mov [00CA99C0],eax
+mov [00CA99C4],eax
+mov eax,00004000
+mov [00B2C4D0],eax
+mov eax,00006D60
+mov [00B2C4D4],eax
+mov eax,8000
+mov [00B2C4D8],eax // 0x12E uses 3D coordinates which are located on different addresses than the usual 2D ones used by all enemies, as well as one rotation value for each XYZ axis. I don't know about any way to set its 3D coordinates and rotation angles using the enemy spawning routines themselves, so I had to manually modify the parameters.
+mov eax,0000012E
+
+exit:
+jmp returnhere
+
+rotation: // Rewriting the enemy 3D model rotation routine so that they rotate on the right axes.
+mov eax,[ebx+2A]
+push eax
+mov eax,[ebx+32]
+neg eax
+push eax
+mov eax,[ebx+2E]
+jmp HS_e.exe+34BB43
+
+"HS_e.exe"+10B63F:
+jmp newmem
+returnhere:
+"HS_e.exe"+34BAE4:
+fild dword ptr [ebx+000000C2]
+"HS_e.exe"+34BAFC:
+fild dword ptr [ebx+000000BE]
+"HS_e.exe"+34BB38:
+jmp rotation

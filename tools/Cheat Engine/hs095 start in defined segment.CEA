@@ -1,0 +1,24 @@
+alloc(newmem,2048)
+label(returnhere)
+label(exit)
+
+newmem:
+mov [shoot2.exe+6C6E68],00000004
+// Change 00000004 to the value of the stage you want to access
+//0: Segment 1
+//1: Segment 2
+//2: Segment 3
+//3: Segment 4
+//4: Segment 5
+//5: Segment 6
+//6: Segment 7
+//7: Segment 8
+//8: Shrine of Farewell
+
+exit:
+jmp returnhere
+
+"shoot2.exe"+6F5C4:
+jmp newmem
+returnhere:
+

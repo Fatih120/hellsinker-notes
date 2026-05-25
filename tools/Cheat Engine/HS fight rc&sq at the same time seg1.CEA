@@ -1,0 +1,28 @@
+// Hellsinker.
+// Fight Fake Rex Cavalier and Scarlet Queen at the same time at the end of Segment 1.
+// By Beetle
+// Useless but fun.
+alloc(newmem,2048)
+label(returnhere)
+label(exit)
+newmem:
+call HS_e.exe+110934
+mov eax,[HS_e.exe+8A9998]
+cmp eax,0
+jne exit
+// Spawn Scarlet Queen
+mov [esi*4+HS_e.exe+856394],0
+push 00
+push 40
+push 3F000000
+mov ecx,FFFF7360
+mov edx,FFFFC568
+mov eax,00000065
+call HS_e.exe+110934
+
+exit:
+jmp returnhere
+"HS_e.exe"+34733C:
+jmp newmem
+returnhere:
+

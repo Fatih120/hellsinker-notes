@@ -1,0 +1,2 @@
+Ornithopter wave: appear if at least 96 Ornithopters are destroyed in previous sections
+Laser shooters: appear if got at least 1 Immortality bonus

@@ -1,0 +1,14 @@
+Seg1L   │  0
+Seg2L   │ -1
+Seg3L   │ -1
+Seg4    │ -5
+Seg5    │ -2
+Seg6    │ -1
+Seg7    │ -2
+Seg8    │ -1
+Shrine  │ -1
+Seg1B   │  0
+Seg2B   │ -1
+Seg3B   │ -1
+TGM     │ -1
+TWoAF   │ -1

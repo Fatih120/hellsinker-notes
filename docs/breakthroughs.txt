@@ -1,0 +1,7 @@
+byte  HS_e.exe+678364: SECTOR
+byte  HS_e.exe+6784AC: Spirit Breakthrough
+byte  HS_e.exe+6784AD: Kill Breakthrough
+dword HS_e.exe+6784E4: Spirits earned from previous stages
+dword HS_e.exe+6784F0: Spirits earned in current stage
+dword HS_e.exe+8A9998: current stage
+word  HS_e.exe+4CF804: ?

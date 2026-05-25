@@ -1,0 +1,108 @@
+HS_e.exe+14ABAC - push ebp
+HS_e.exe+14ABAD - mov ebp,esp
+HS_e.exe+14ABAF - add esp,-08
+HS_e.exe+14ABB2 - push ebx
+HS_e.exe+14ABB3 - push esi
+HS_e.exe+14ABB4 - push edi
+HS_e.exe+14ABB5 - mov [ebp-01],cl
+HS_e.exe+14ABB8 - mov ebx,eax
+HS_e.exe+14ABBA - mov edi,HS_e.exe+682144
+HS_e.exe+14ABBF - imul esi,ebx,00000099
+HS_e.exe+14ABC5 - imul eax,[edi+esi*8+000012F8],1E
+HS_e.exe+14ABCD - mov edx,000003E8
+HS_e.exe+14ABD2 - sub edx,eax
+HS_e.exe+14ABD4 - imul eax,edx,00000960
+HS_e.exe+14ABDA - mov ecx,000003E8
+HS_e.exe+14ABDF - cdq 
+HS_e.exe+14ABE0 - idiv ecx
+HS_e.exe+14ABE2 - mov [edi+esi*8+00001768],eax
+HS_e.exe+14ABE9 - imul eax,ebx,00000099
+HS_e.exe+14ABEF - cmp dword ptr [edi+eax*8+00001768],64
+HS_e.exe+14ABF7 - jnl HS_e.exe+14AC04
+HS_e.exe+14ABF9 - mov [edi+esi*8+00001768],00000064
+HS_e.exe+14AC04 - mov [edi+esi*8+000012E0],000004B0
+HS_e.exe+14AC0F - imul eax,[edi+60],64
+HS_e.exe+14AC13 - mov edx,00000258
+HS_e.exe+14AC18 - sub edx,eax
+HS_e.exe+14AC1A - mov eax,[edi+esi*8+000012F8]
+HS_e.exe+14AC21 - add eax,eax
+HS_e.exe+14AC23 - lea eax,[eax+eax*2]
+HS_e.exe+14AC26 - add edx,eax
+HS_e.exe+14AC28 - mov eax,[edi+5C]
+HS_e.exe+14AC2B - add eax,eax
+HS_e.exe+14AC2D - mov ecx,00000064
+HS_e.exe+14AC32 - sub ecx,eax
+HS_e.exe+14AC34 - imul edx,ecx
+HS_e.exe+14AC37 - mov eax,edx
+HS_e.exe+14AC39 - add eax,eax
+HS_e.exe+14AC3B - lea eax,[eax+eax*4]
+HS_e.exe+14AC3E - mov [edi+esi*8+000012EC],eax
+HS_e.exe+14AC45 - mov [edi+esi*8+000012D4],0000000A
+HS_e.exe+14AC50 - mov byte ptr [edi+esi*8+000012BE],01
+HS_e.exe+14AC58 - mov [edi+esi*8+000012F4],00000006
+HS_e.exe+14AC63 - imul esi,ebx,00000099
+HS_e.exe+14AC69 - mov eax,[edi+esi*8+00001308]
+HS_e.exe+14AC70 - mov edx,[HS_e.exe+46CD2C]
+HS_e.exe+14AC76 - add edx,00000C80
+HS_e.exe+14AC7C - cmp eax,edx
+HS_e.exe+14AC7E - jg HS_e.exe+14ACBE
+HS_e.exe+14AC80 - mov edx,[HS_e.exe+46CD30]
+HS_e.exe+14AC86 - sub edx,00000C80
+HS_e.exe+14AC8C - cmp eax,edx
+HS_e.exe+14AC8E - jl HS_e.exe+14ACBE
+HS_e.exe+14AC90 - mov eax,[edi+esi*8+0000130C]
+HS_e.exe+14AC97 - mov edx,[HS_e.exe+46CD38]
+HS_e.exe+14AC9D - add edx,00000C80
+HS_e.exe+14ACA3 - cmp eax,edx
+HS_e.exe+14ACA5 - jg HS_e.exe+14ACBE
+HS_e.exe+14ACA7 - mov eax,[edi+esi*8+0000130C]
+HS_e.exe+14ACAE - mov edx,[HS_e.exe+46CD34]
+HS_e.exe+14ACB4 - sub edx,00000C80
+HS_e.exe+14ACBA - cmp eax,edx
+HS_e.exe+14ACBC - jnl HS_e.exe+14ACC6
+HS_e.exe+14ACBE - mov byte ptr [edi+esi*8+000012BC],00
+HS_e.exe+14ACC6 - cmp byte ptr [ebp-01],00
+HS_e.exe+14ACCA - je HS_e.exe+14AD57
+HS_e.exe+14ACD0 - push 43BC0000
+HS_e.exe+14ACD5 - push 43840000
+HS_e.exe+14ACDA - push 43C40000
+HS_e.exe+14ACDF - push 43900000
+HS_e.exe+14ACE4 - mov eax,[HS_e.exe+46CD28]
+HS_e.exe+14ACE9 - add eax,00000140
+HS_e.exe+14ACEE - mov [ebp-08],eax
+HS_e.exe+14ACF1 - fild dword ptr [ebp-08]
+HS_e.exe+14ACF4 - fild dword ptr [edi+esi*8+00001308]
+HS_e.exe+14ACFB - fld dword ptr [HS_e.exe+14AD78]
+HS_e.exe+14AD01 - call HS_e.exe+3A04
+HS_e.exe+14AD06 - faddp 
+HS_e.exe+14AD08 - add esp,-04
+HS_e.exe+14AD0B - fstp dword ptr [esp]
+HS_e.exe+14AD0E - wait 
+HS_e.exe+14AD0F - fild dword ptr [edi+esi*8+0000130C]
+HS_e.exe+14AD16 - fld dword ptr [HS_e.exe+14AD78]
+HS_e.exe+14AD1C - call HS_e.exe+3A04
+HS_e.exe+14AD21 - fadd dword ptr [HS_e.exe+14AD7C]
+HS_e.exe+14AD27 - add esp,-04
+HS_e.exe+14AD2A - fstp dword ptr [esp]
+HS_e.exe+14AD2D - wait 
+HS_e.exe+14AD2E - push 3F800000
+HS_e.exe+14AD33 - push 40000000
+HS_e.exe+14AD38 - push 00
+HS_e.exe+14AD3A - push 00
+HS_e.exe+14AD3C - push 5A
+HS_e.exe+14AD3E - mov eax,[HS_e.exe+3CBEEC]
+HS_e.exe+14AD43 - mov eax,[eax+000003DC]
+HS_e.exe+14AD49 - or ecx,-01
+HS_e.exe+14AD4C - mov edx,[HS_e.exe+678574]
+HS_e.exe+14AD52 - call HS_e.exe+84D6C
+HS_e.exe+14AD57 - inc [edi+esi*8+000012F8]
+HS_e.exe+14AD5E - cmp dword ptr [edi+esi*8+000012F8],2F
+HS_e.exe+14AD66 - jle HS_e.exe+14AD70
+HS_e.exe+14AD68 - mov byte ptr [edi+esi*8+000012BC],00
+HS_e.exe+14AD70 - pop edi
+HS_e.exe+14AD71 - pop esi
+HS_e.exe+14AD72 - pop ebx
+HS_e.exe+14AD73 - pop ecx
+HS_e.exe+14AD74 - pop ecx
+HS_e.exe+14AD75 - pop ebp
+HS_e.exe+14AD76 - ret 

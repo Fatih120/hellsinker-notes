@@ -1,0 +1,22 @@
+Segment 3B:
+	HS_e.exe+E8F7B - U476 spawn interval: 10-(STELLA level / 2)
+Segment 4:
+	HS_e.exe+EF7B5 - two additional "Honeycomb" enemies if STELLA level>6
+	HS_e.exe+F257D - do not spawn Rusted Dragon (boss) if STELLA level<4, lives<2 and Survivability<100
+Segment 5:
+	HS_e.exe+F4E13 - spawn blue enemies if area number<6 or STELLA level>=3?
+	HS_e.exe+F6378 - popcorn enemies spawn every (40-(STELLA level)*3) frames during 160 frames according to their spawn timer which is reset each time the camera changes its movement direction.
+Segment 7:
+	HS_e.exe+2781DF - Rex Cavalier LIMIT 22 missile fire interval: (100 - (STELLA level) * 3)
+Segment 8:
+	HS_e.exe+1094B4 - U469 spawn interval: (6-(STELLA level)/3) frames
+	HS_e.exe+10954A - same as HS_e.exe+1094B4
+	HS_e.exe+1095E0 - same as HS_e.exe+1094B4
+	HS_e.exe+109676 - same as HS_e.exe+1094B4
+	HS_e.exe+10970C - same as HS_e.exe+1094B4
+	HS_e.exe+1097A2 - same as HS_e.exe+1094B4
+	HS_e.exe+109816 - same as HS_e.exe+1094B4
+	HS_e.exe+10988A - same as HS_e.exe+1094B4
+	HS_e.exe+10AC39 - U472 spawn interval: (12-(STELLA level)/3)
+	HS_e.exe+10B75C - same as HS_e.exe+1094B4
+	HS_e.exe+10B7A0 - same as HS_e.exe+1094B4

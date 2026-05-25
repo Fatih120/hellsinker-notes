@@ -1,0 +1,34 @@
+- ASPIRANT -
+HS_e.exe+354713                   | checks
+HS_e.exe+35476A                   | start of code
+HS_e.exe+3549A6                   | check for hits
+HS_e.exe+3549B3 ~ HS_e.exe+354B38 | executes when taking a hit:
+	> set hit flag to false
+	> divides SOL by 7
+	> sets SOL level to 0
+	> if Fossil Maiden used then weaken main shot (low SOL)
+	> decrease STELLA by 1 level
+	> set number of i-frames to 120 (2 seconds)
+	> decrease TERRA by 6
+	> decrease TERRA by a value determined by:
+		smallest value between (floor([total number of hits] / 3) + ([number of deaths during stage] * 2)) and 12
+		this value is divided by two if you already died 3 times or more during the stage and current stage is Seg1L or Seg2L.
+	> set SATISFACTION to ((SATISFACTION*7)+20000)/8
+	> play sound effect
+	> erase bullets within a circle of 128 pixels of radius
+	> create particle 0x79 at player's position
+	> display "AUTO REJECTION" below player's position
+	> increase number of hits taken
+	> decrease number of available protections
++354B1B > if in an FSO/Short run, increase DAMAGE and PROTECTED counters for the current stage
+
+- SOLIDSTATE -
+HS_e.exe+...... |
+
+- ADEPT -
+HS_e.exe+...... |
+
+- PLAYER LIFE MANAGEMENT -
+
+HS_e.exe+35476A                   | start of code
+HS_e.exe+354B40                   | ASPIRANT start of code
