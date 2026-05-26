@@ -22,21 +22,26 @@ Here is some base information on how Hellsinker was (probably) developed:
   
 Do note that there are many different versions of Hellsinker. This does include the different patches and updates, but more importantly, there are three categories of the game worth mentioning:
 
-(2022.07.30) - [Steam Version](https://store.steampowered.com/app/1067720) (Has localizations enabled and was ahead in terms of updates, has Steam API/DRM)
-(2019.01.20) - [Booth.PM (DRM-less)](https://booth.pm/ja/items/1187721) (Purely JP release that needs patches)
-(2004.04.13) - [Hellsinker 0.95](https://www.vector.co.jp/download/file/win95/game/fh325441.html) ("Prototype" pre-release with lots of hidden unfinished content and almost unrecognizable)
+- [Steam Version](https://store.steampowered.com/app/1067720) (Has localizations enabled and was ahead in terms of updates for a long time, has Steam API/DRM)
+- [Booth.PM (DRM-less)](https://booth.pm/ja/items/1187721) (Purely JP release that updated via patch files)
+- [Hellsinker 0.95](https://www.vector.co.jp/download/file/win95/game/fh325441.html) ("Prototype" pre-release with lots of hidden unfinished content and almost unrecognizable)
 
-Timeline (based on powershell reportings of last file modification date. Thank you NTFS.)
-6th - 1.009 : 2012.03.24
-5th - 1.008 : 2009.09.14
-3rd - 1.003 : 2007.12.30
-Tr2 - ????? : 2007.06.28
-1st - 1.000 : 2007.06.15
-Tr1 - 0.95  : 2004.04.12
+Timeline (based on powershell reportings of last file modification date. Thank you NTFS.)<br>
+
+| Edition | Version  | Date       |
+| :-----: | :-----:  | :--------: |
+| DDL     | dl23/r11 | 2022.07.31 |
+| DDL     | dl01/r1  | 2019.01.20 |
+| 6th     | 1.009    | 2012.03.24 |
+| 5th     | 1.008    | 2009.09.14 |
+| 3rd     | 1.003    | 2007.12.30 |
+| Trial2  | ?????    | 2007.06.28 |
+| 1st     | 1.000    | 2007.06.15 |
+| Trial1  | 0.95     | 2004.04.12 |
 
 As you can see, things are a bit jumbled in terms of releases. These three are important to state due to the type of previous decompilation, which has been split between the "booth" v1.009 version and v0.95 and do not have parity with either the current 2024 Booth update or the Steam version (TODO: a timeline of versions).
 
-**Until this repo's attitude changes, newly-found/carry-over information will be based on the latest Booth.PM version of Hellsinker, which is important for static addresses and function parity.**
+**Newly-found/carry-over information will be based on the latest Booth.PM version of Hellsinker (dl23), which is important for static addresses and function parity.** This is chosen for its DRM-less state.
 
 ## How-to
 
